@@ -1,0 +1,47 @@
+name: The Stack Sheet newsletter
+
+on:
+  schedule:
+    # Every day 07:47 UTC (08:47 Paris). Sends only when an issue in Notion is Ready and due,
+    # and finishes any leftover recipients from the day before.
+    - cron: "47 7 * * *"
+  workflow_dispatch:
+    inputs:
+      command:
+        description: "What to run"
+        type: choice
+        options: [list, test, send]
+        default: list
+      issue:
+        description: "Issue number for test (empty = next Ready issue)"
+        required: false
+        default: ""
+
+concurrency: newsletter
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run
+        run: python3 newsletter.py ${{ inputs.command || 'send' }} ${{ inputs.issue }}
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_SUBSCRIBERS_DB: 4201628220ab81a49d62e2a4336dbb93
+          NOTION_ISSUES_DB: 4201628220ab810e9288e1677d79ba79
+          SMTP_HOST: ${{ vars.SMTP_HOST || 'smtp.gmail.com' }}
+          SMTP_PORT: ${{ vars.SMTP_PORT || '465' }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          FROM_EMAIL: ${{ vars.FROM_EMAIL || 'hello@usefulfoundertools.me' }}
+          FROM_NAME: The Stack Sheet
+          REPLY_TO: info@usefulfoundertools.me
+          TEST_TO: ${{ vars.TEST_TO }}
+          DRY_RUN: ${{ vars.NEWSLETTER_DRY_RUN || 'false' }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHANNEL: ${{ vars.TELEGRAM_CHANNEL }}
