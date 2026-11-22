@@ -239,7 +239,7 @@ def cmd_setup():
         sys.exit("Page not found. In Notion open the page, ••• → Connections → add your integration, then run setup again. "
                  f"Pages visible: {[title(pg) for pg in pages]}")
     existing = notion("POST", "search", {"filter": {"property": "object", "value": "database"}})["results"]
-    have = {"".join(x["plain_text"] for x in d["title"]): d["id"] for d in existing
+    have = {"".join(x["plain_text"] for x in d["title"]).strip(): d["id"] for d in existing
             if d.get("parent", {}).get("page_id", "").replace("-", "") == page["id"].replace("-", "")}
     sel = lambda *o: {"select": {"options": [{"name": n, "color": c} for n, c in o]}}
     if "Subscribers" not in have:
@@ -260,7 +260,10 @@ def cmd_setup():
                            "Status": sel(("Draft", "gray"), ("Ready", "blue"), ("Sent", "green")),
                            "Send date": {"date": {}}, "Subject": {"rich_text": {}},
                            "Preview text": {"rich_text": {}}, "Sent to": {"number": {}}}})["id"]
+    if not [r for r in query(have["Issues"]) if text(next(v for v in r["properties"].values() if v["type"] == "title"))]:
         rt = lambda t: {"rich_text": [{"type": "text", "text": {"content": t}}]}
+        for r in query(have["Issues"]):  # drop the blank starter rows Notion adds
+            notion("PATCH", f"pages/{r['id']}", {"archived": True})
         notion("POST", "pages", {"parent": {"database_id": have["Issues"]}, "properties": {
             "Title": {"title": [{"type": "text", "text": {"content": "The week-one stack & your first AI workflow"}}]},
             "Issue": {"number": 1}, "Status": {"select": {"name": "Ready"}},
