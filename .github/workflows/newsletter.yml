@@ -31,7 +31,7 @@ jobs:
       - name: Run
         run: python3 newsletter.py ${{ inputs.command || 'send' }} ${{ inputs.issue }}
         env:
-          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN || secrets.UFT_SENDER }}
           NOTION_SUBSCRIBERS_DB: ${{ vars.NOTION_SUBSCRIBERS_DB }}
           NOTION_ISSUES_DB: ${{ vars.NOTION_ISSUES_DB }}
           SMTP_HOST: ${{ vars.SMTP_HOST || 'smtp.gmail.com' }}
