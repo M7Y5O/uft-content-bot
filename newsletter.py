@@ -28,7 +28,7 @@ from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parent
 TODAY = datetime.now(ZoneInfo("Europe/Paris")).date().isoformat()
-UNSUB_FORM = "https://tally.so/r/EqxP54"
+UNSUB_FORM = "https://tally.so/r/2jKL4M"
 E = os.environ.get
 DRY = E("DRY_RUN", "true").lower() != "false"
 
