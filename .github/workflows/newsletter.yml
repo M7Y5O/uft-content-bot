@@ -34,6 +34,7 @@ jobs:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN || secrets.UFT_SENDER }}
           NOTION_SUBSCRIBERS_DB: ${{ vars.NOTION_SUBSCRIBERS_DB }}
           NOTION_ISSUES_DB: ${{ vars.NOTION_ISSUES_DB }}
+          NOTION_PAGE_ID: ${{ vars.NOTION_PAGE_ID }}
           SMTP_HOST: ${{ vars.SMTP_HOST || 'smtp.gmail.com' }}
           SMTP_PORT: ${{ vars.SMTP_PORT || '465' }}
           SMTP_USER: ${{ secrets.SMTP_USER }}

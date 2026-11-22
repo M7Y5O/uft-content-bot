@@ -228,7 +228,13 @@ def cmd_list():
 
 def cmd_setup():
     """Create the Subscribers + Issues databases inside the Notion page shared with the integration."""
-    pages = notion("POST", "search", {"filter": {"property": "object", "value": "page"}})["results"]
+    me = notion("GET", "users/me")
+    print(f"Connected as integration: {me.get('name')} (workspace: {me.get('bot', {}).get('workspace_name')})")
+    if E("NOTION_PAGE_ID"):
+        pages = [notion("GET", f"pages/{E('NOTION_PAGE_ID')}")]
+    else:
+        pages = notion("POST", "search", {"query": "", "page_size": 100})["results"]
+        pages = [x for x in pages if x["object"] == "page"]
     want = (E("NOTION_PAGE_TITLE") or "useful founder tool").lower()
     def title(pg):
         for v in pg["properties"].values():
