@@ -1,0 +1,100 @@
+{
+ "format": "Add / Cut",
+ "video": {
+  "scenes": [
+   {
+    "type": "hook",
+    "lines": [
+     "Stop the",
+     "email"
+    ],
+    "sel": "ping-pong.",
+    "sub": "one tool fixes it ↓",
+    "dur": 3.2
+   },
+   {
+    "type": "card",
+    "tag": "CUT",
+    "tone": "red",
+    "strike": true,
+    "title": "\"When works for you?\"",
+    "body": "Five emails to book one call.<br><b>Every single time.</b>",
+    "dur": 6
+   },
+   {
+    "type": "card",
+    "tag": "ADD",
+    "tone": "blue",
+    "title": "Cal.com",
+    "body": "One booking link with your real availability.<br><b>They pick a slot. Done.</b>",
+    "dur": 6.5
+   },
+   {
+    "type": "cta",
+    "lines": [
+     "What else",
+     "should you"
+    ],
+    "sel": "cut?",
+    "button": "Free 2-min stack audit",
+    "follow": "Follow for one tool to add & one to cut, every week.",
+    "dur": 6
+   }
+  ]
+ },
+ "carousel": {
+  "slides": [
+   {
+    "type": "cover",
+    "lines": [
+     "Stop the email"
+    ],
+    "sel": "ping-pong.",
+    "sub": "One tool to cut, one to add."
+   },
+   {
+    "type": "text",
+    "eyebrow": "cut",
+    "tone": "red",
+    "lines": [
+     "\"When works",
+     "for you?\""
+    ],
+    "bullets": [
+     "5 emails to book one call",
+     "Time zones get mixed up",
+     "Leads go cold while you wait"
+    ]
+   },
+   {
+    "type": "text",
+    "eyebrow": "add",
+    "tone": "blue",
+    "lines": [
+     "One booking",
+     "link"
+    ],
+    "bullets": [
+     "Cal.com or Calendly",
+     "Shows your real availability",
+     "Put it on your site, email signature and bio"
+    ]
+   },
+   {
+    "type": "cta",
+    "lines": [
+     "What else",
+     "should you"
+    ],
+    "sel": "cut?",
+    "sub": "Our free 2-min audit names your gaps."
+   }
+  ]
+ },
+ "captions": {
+  "tiktok": "Five emails to book one call? Cut it. One booking link instead. Free stack audit in bio. #founder #startup #aitools #solofounder",
+  "instagram": "CUT: the 5-email dance to book a call.\nADD: one booking link (Cal.com or Calendly) on your site, signature and bio.\n\nFree 2-min stack audit: link in bio.\n\n#founder #startup #aitools #solofounder"
+ },
+ "x_post": "Cut: \"when works for you?\" (5 emails to book one call).\n\nAdd: one booking link with your real availability. On your site, your email signature and your bio.",
+ "date": "2026-12-01"
+}

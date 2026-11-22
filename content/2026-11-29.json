@@ -1,0 +1,137 @@
+{
+ "format": "Stack audit promo",
+ "video": {
+  "scenes": [
+   {
+    "type": "hook",
+    "lines": [
+     "What's missing",
+     "from your"
+    ],
+    "sel": "stack?",
+    "sub": "find out in 2 minutes ↓",
+    "dur": 3.4
+   },
+   {
+    "type": "steps",
+    "tag": "HOW IT WORKS",
+    "tone": "blue",
+    "title": "8 questions",
+    "steps": [
+     "What you build, your stage, your team",
+     "Region, budget, biggest pain",
+     "How much you use AI today",
+     "What you already have"
+    ],
+    "dur": 7.5
+   },
+   {
+    "type": "list",
+    "tag": "EXAMPLE RESULT · SAAS",
+    "title": "Your gaps, ranked",
+    "items": [
+     {
+      "name": "PostHog",
+      "meta": "analytics",
+      "badge": "now",
+      "tone": "red"
+     },
+     {
+      "name": "Loops",
+      "meta": "product email",
+      "badge": "next",
+      "tone": "amber"
+     },
+     {
+      "name": "Cursor + Claude",
+      "meta": "AI workflow",
+      "badge": "✦ AI",
+      "tone": "solid"
+     }
+    ],
+    "dur": 7.5
+   },
+   {
+    "type": "cta",
+    "lines": [
+     "Run yours.",
+     "It's"
+    ],
+    "sel": "free.",
+    "button": "Free 2-min stack audit",
+    "follow": "Follow for one tool to add & one to cut, every week.",
+    "dur": 6
+   }
+  ]
+ },
+ "carousel": {
+  "slides": [
+   {
+    "type": "cover",
+    "lines": [
+     "What's missing",
+     "from your"
+    ],
+    "sel": "stack?",
+    "sub": "A free 2-minute audit tells you."
+   },
+   {
+    "type": "steps",
+    "eyebrow": "how it works",
+    "lines": [
+     "8 questions,",
+     "2 minutes"
+    ],
+    "steps": [
+     "What you build, your stage, your team",
+     "Region, budget, biggest pain",
+     "How much you use AI today",
+     "What you already have"
+    ]
+   },
+   {
+    "type": "list",
+    "eyebrow": "example result",
+    "lines": [
+     "Your gaps,",
+     "ranked"
+    ],
+    "items": [
+     {
+      "name": "Set up now",
+      "meta": "the tools you're missing today",
+      "badge": "now",
+      "tone": "red"
+     },
+     {
+      "name": "Next 30 days",
+      "meta": "what to add next",
+      "badge": "next",
+      "tone": "amber"
+     },
+     {
+      "name": "3 AI workflows",
+      "meta": "matched to how you work",
+      "badge": "✦ AI",
+      "tone": "solid"
+     }
+    ]
+   },
+   {
+    "type": "cta",
+    "lines": [
+     "Run yours.",
+     "It's"
+    ],
+    "sel": "free.",
+    "sub": "Link in bio."
+   }
+  ]
+ },
+ "captions": {
+  "tiktok": "8 questions, 2 minutes: find what's missing from your stack, plus 3 AI workflows. Link in bio. #founder #startup #aitools #solofounder",
+  "instagram": "What's missing from your stack?\n\n8 questions → your gaps ranked (now / next / later) + 3 AI workflows matched to you.\n\nFree. Link in bio.\n\n#founder #startup #aitools #solofounder"
+ },
+ "x_post": "Built a free stack audit for founders.\n\n8 questions → your missing tools ranked (now / next / later) + 3 AI workflows matched to how you work.\n\nTakes 2 minutes.",
+ "date": "2026-11-29"
+}

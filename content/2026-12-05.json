@@ -1,0 +1,100 @@
+{
+ "format": "Founder mistake",
+ "video": {
+  "scenes": [
+   {
+    "type": "hook",
+    "lines": [
+     "Your personal",
+     "account is not",
+     "a business"
+    ],
+    "sel": "account.",
+    "dur": 3.6
+   },
+   {
+    "type": "card",
+    "tag": "MISTAKE",
+    "tone": "red",
+    "title": "Mixing the money",
+    "body": "Client payments and groceries in one account.<br><b>Your accountant will hate it.</b>",
+    "dur": 6
+   },
+   {
+    "type": "card",
+    "tag": "FIX",
+    "tone": "green",
+    "title": "Open a business account",
+    "body": "Do it before your first invoice.<br><b>Qonto in the EU, Mercury in the US.</b>",
+    "dur": 6.5
+   },
+   {
+    "type": "cta",
+    "lines": [
+     "What's missing",
+     "from your"
+    ],
+    "sel": "stack?",
+    "button": "Free 2-min stack audit",
+    "follow": "Follow for one tool to add & one to cut, every week.",
+    "dur": 6
+   }
+  ]
+ },
+ "carousel": {
+  "slides": [
+   {
+    "type": "cover",
+    "lines": [
+     "Your personal account",
+     "is not a business"
+    ],
+    "sel": "account.",
+    "sub": "A week-one mistake that costs you at tax time."
+   },
+   {
+    "type": "text",
+    "eyebrow": "the mistake",
+    "tone": "red",
+    "lines": [
+     "Mixing business",
+     "and personal"
+    ],
+    "bullets": [
+     "Hard to see what the business earns",
+     "Painful bookkeeping at year end",
+     "Higher accountant fees"
+    ]
+   },
+   {
+    "type": "text",
+    "eyebrow": "the fix",
+    "tone": "green",
+    "lines": [
+     "Open it",
+     "before invoice #1"
+    ],
+    "bullets": [
+     "Qonto for French and EU companies",
+     "Mercury for US companies",
+     "Wise if you get paid in many currencies"
+    ]
+   },
+   {
+    "type": "cta",
+    "lines": [
+     "What's missing",
+     "from your"
+    ],
+    "sel": "stack?",
+    "sub": "Our free 2-min audit names your gaps."
+   }
+  ]
+ },
+ "captions": {
+  "tiktok": "Mixing business and personal money is a week-one mistake. Here's the fix. Free stack audit in bio. #founder #startup #aitools #solofounder",
+  "instagram": "Your personal account is not a business account.\n\nOpen one before your first invoice: Qonto (EU), Mercury (US), Wise (many currencies).\n\nFree 2-min stack audit: link in bio.\n\n#founder #startup #aitools #solofounder"
+ },
+ "x_post": "Week-one founder mistake: client payments landing in your personal account.\n\nOpen a business account before invoice #1. Your bookkeeping (and your accountant) will thank you.",
+ "date": "2026-12-05"
+}

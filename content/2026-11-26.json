@@ -1,0 +1,142 @@
+{
+ "format": "Stack for a niche",
+ "video": {
+  "scenes": [
+   {
+    "type": "hook",
+    "lines": [
+     "The solo",
+     "SaaS"
+    ],
+    "sel": "stack.",
+    "sub": "6 tools, one job each ↓",
+    "dur": 3.2
+   },
+   {
+    "type": "list",
+    "tag": "SOLO SAAS",
+    "title": "Everything you need",
+    "items": [
+     {
+      "name": "Framer",
+      "meta": "marketing site"
+     },
+     {
+      "name": "Supabase",
+      "meta": "database + auth"
+     },
+     {
+      "name": "Vercel",
+      "meta": "deploys"
+     },
+     {
+      "name": "Stripe or Paddle",
+      "meta": "payments"
+     },
+     {
+      "name": "Loops",
+      "meta": "product email"
+     },
+     {
+      "name": "Claude",
+      "meta": "AI assistant",
+      "badge": "✦ AI"
+     }
+    ],
+    "dur": 9
+   },
+   {
+    "type": "card",
+    "tag": "WHAT CAN WAIT",
+    "tone": "amber",
+    "title": "CRM, helpdesk, Slack",
+    "body": "Add them when the volume shows up.<br><b>Not before.</b>",
+    "dur": 5.5
+   },
+   {
+    "type": "cta",
+    "lines": [
+     "What's missing",
+     "from your"
+    ],
+    "sel": "stack?",
+    "button": "Free 2-min stack audit",
+    "follow": "Follow for one tool to add & one to cut, every week.",
+    "dur": 6
+   }
+  ]
+ },
+ "carousel": {
+  "slides": [
+   {
+    "type": "cover",
+    "lines": [
+     "The solo",
+     "SaaS"
+    ],
+    "sel": "stack.",
+    "sub": "Six tools, one job each. Save it."
+   },
+   {
+    "type": "list",
+    "eyebrow": "the stack",
+    "lines": [
+     "Everything you need",
+     "to launch"
+    ],
+    "items": [
+     {
+      "name": "Framer",
+      "meta": "marketing site"
+     },
+     {
+      "name": "Supabase + Vercel",
+      "meta": "database, auth, deploys"
+     },
+     {
+      "name": "Stripe or Paddle",
+      "meta": "payments"
+     },
+     {
+      "name": "Loops",
+      "meta": "onboarding and product email"
+     },
+     {
+      "name": "Claude",
+      "meta": "writing, code review, research",
+      "badge": "✦ AI"
+     }
+    ]
+   },
+   {
+    "type": "text",
+    "eyebrow": "what can wait",
+    "tone": "amber",
+    "lines": [
+     "Don't buy these",
+     "yet"
+    ],
+    "bullets": [
+     "A CRM before you have leads",
+     "A helpdesk before you have tickets",
+     "Team chat before you have a team"
+    ]
+   },
+   {
+    "type": "cta",
+    "lines": [
+     "What's missing",
+     "from your"
+    ],
+    "sel": "stack?",
+    "sub": "Our free 2-min audit names your gaps."
+   }
+  ]
+ },
+ "captions": {
+  "tiktok": "The solo SaaS stack: 6 tools, one job each. Save it. Free stack audit in bio. #founder #startup #aitools #solofounder #saas #indiehacker",
+  "instagram": "The solo SaaS stack ✦\n\nFramer · Supabase · Vercel · Stripe or Paddle · Loops · Claude\n\nWhat can wait: CRM, helpdesk, team chat.\n\nSave this. Free 2-min stack audit: link in bio.\n\n#founder #startup #aitools #solofounder"
+ },
+ "x_post": "The solo SaaS stack:\n\nFramer (site)\nSupabase (db + auth)\nVercel (deploys)\nStripe or Paddle (payments)\nLoops (product email)\nClaude (everything else)\n\nCRM, helpdesk, team chat: later.",
+ "date": "2026-11-26"
+}

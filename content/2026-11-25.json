@@ -1,0 +1,132 @@
+{
+ "format": "Tool vs tool",
+ "video": {
+  "scenes": [
+   {
+    "type": "hook",
+    "lines": [
+     "Stripe or",
+     "Paddle?"
+    ],
+    "sel": "taxes.",
+    "sub": "the answer is about ↑",
+    "dur": 3.4
+   },
+   {
+    "type": "versus",
+    "title": "Who handles the tax?",
+    "left": {
+     "name": "Stripe",
+     "points": [
+      "You are the seller",
+      "You file sales tax / VAT",
+      "Lower fees, full control"
+     ]
+    },
+    "right": {
+     "name": "Paddle",
+     "points": [
+      "Merchant of record",
+      "They collect and file tax",
+      "Higher fees, less work"
+     ]
+    },
+    "dur": 8
+   },
+   {
+    "type": "card",
+    "tag": "PICK",
+    "tone": "green",
+    "title": "Selling software worldwide?",
+    "body": "A merchant of record saves you the tax work.<br><b>One country or services? Stripe.</b>",
+    "dur": 6.5
+   },
+   {
+    "type": "cta",
+    "lines": [
+     "Which payment tool",
+     "fits your"
+    ],
+    "sel": "stack?",
+    "button": "Free 2-min stack audit",
+    "follow": "Follow for one tool to add & one to cut, every week.",
+    "dur": 6
+   }
+  ]
+ },
+ "carousel": {
+  "slides": [
+   {
+    "type": "cover",
+    "lines": [
+     "Stripe vs Paddle:",
+     "it's about"
+    ],
+    "sel": "taxes.",
+    "sub": "Merchant of record, explained in 4 slides."
+   },
+   {
+    "type": "versus",
+    "eyebrow": "the difference",
+    "lines": [
+     "Who is the",
+     "seller?"
+    ],
+    "left": {
+     "name": "Stripe",
+     "points": [
+      "You are the seller",
+      "You register and file tax",
+      "Lower fees"
+     ]
+    },
+    "right": {
+     "name": "Paddle",
+     "points": [
+      "They are the seller",
+      "They collect and file tax",
+      "Higher fees"
+     ]
+    }
+   },
+   {
+    "type": "text",
+    "eyebrow": "how to pick",
+    "tone": "green",
+    "lines": [
+     "Pick Paddle if…",
+     "pick Stripe if…"
+    ],
+    "bullets": [
+     "Software sold in many countries, small team → Paddle",
+     "One country, services or custom billing → Stripe",
+     "Physical products → your store's checkout"
+    ],
+    "body": "Not tax advice: check your obligations with an accountant."
+   },
+   {
+    "type": "cta",
+    "lines": [
+     "Which tools",
+     "fit your"
+    ],
+    "sel": "stack?",
+    "sub": "Our free 2-min audit names your gaps."
+   }
+  ]
+ },
+ "captions": {
+  "tiktok": "Stripe vs Paddle isn't about features. It's about who files your sales tax. Free stack audit in bio. #founder #startup #aitools #solofounder #saas",
+  "instagram": "Stripe or Paddle? Ask one question: who is the seller?\n\nStripe: you are, you handle tax.\nPaddle: they are (merchant of record), they handle tax.\n\nNot tax advice. Free 2-min stack audit: link in bio.\n\n#founder #startup #aitools #solofounder"
+ },
+ "x_post": "Stripe vs Paddle isn't a feature question.\n\nStripe: you're the seller, you file sales tax/VAT.\nPaddle: merchant of record, they collect and file it.\n\nSoftware sold worldwide with a tiny team? MoR usually wins. One country? Stripe.",
+ "x_thread": [
+  "Stripe vs Paddle, explained in 5 tweets:",
+  "Stripe is a payment processor. You're the seller, so registering and filing sales tax/VAT is on you.",
+  "Paddle is a merchant of record. It's legally the seller, collects the tax, files it, pays you the rest.",
+  "MoR fees are higher, but the cross-border tax work leaves your desk.",
+  "Rule of thumb: software sold in many countries → MoR. One country, services, custom billing → Stripe. Not tax advice.",
+  "Free 2-min stack audit picks the right one for you. Link in bio."
+ ],
+ "date": "2026-11-25"
+}

@@ -1,0 +1,104 @@
+{
+ "format": "Tool in 30 seconds",
+ "video": {
+  "scenes": [
+   {
+    "type": "hook",
+    "lines": [
+     "Market research",
+     "in an"
+    ],
+    "sel": "hour.",
+    "dur": 3.2
+   },
+   {
+    "type": "card",
+    "tag": "✦ AI TOOL",
+    "tone": "solid",
+    "title": "Perplexity",
+    "body": "An AI search engine that answers<br><b>with the sources it used.</b>",
+    "dur": 6
+   },
+   {
+    "type": "steps",
+    "tag": "HOW TO USE IT",
+    "tone": "blue",
+    "title": "Competitor research",
+    "steps": [
+     "Ask who the top 5 competitors are",
+     "Ask for their pricing pages",
+     "Open the sources, check them",
+     "Have Claude write a 1-page summary"
+    ],
+    "dur": 8
+   },
+   {
+    "type": "cta",
+    "lines": [
+     "Which AI tools",
+     "fit your"
+    ],
+    "sel": "stack?",
+    "button": "Free 2-min stack audit",
+    "follow": "Follow for one AI tool every week.",
+    "dur": 6
+   }
+  ]
+ },
+ "carousel": {
+  "slides": [
+   {
+    "type": "cover",
+    "lines": [
+     "Market research",
+     "in an"
+    ],
+    "sel": "hour.",
+    "sub": "Perplexity, in 30 seconds."
+   },
+   {
+    "type": "text",
+    "eyebrow": "✦ ai tool",
+    "tone": "solid",
+    "lines": [
+     "What Perplexity",
+     "does"
+    ],
+    "bullets": [
+     "Searches the web and answers",
+     "Shows the sources it used",
+     "Good for competitors, pricing, markets"
+    ]
+   },
+   {
+    "type": "steps",
+    "eyebrow": "how to use it",
+    "lines": [
+     "Competitor research",
+     "in 4 steps"
+    ],
+    "steps": [
+     "Ask who the top 5 competitors are",
+     "Ask for their pricing pages",
+     "Open the sources and check them",
+     "Have Claude write a 1-page summary"
+    ]
+   },
+   {
+    "type": "cta",
+    "lines": [
+     "Which AI tools",
+     "fit your"
+    ],
+    "sel": "stack?",
+    "sub": "Our free 2-min audit names your gaps."
+   }
+  ]
+ },
+ "captions": {
+  "tiktok": "Competitor research in an hour with Perplexity, then a 1-page summary with Claude. Free stack audit in bio. #founder #startup #aitools #solofounder",
+  "instagram": "Perplexity in 30 seconds ✦\n\nAsk → check the sources → summarize with Claude.\n\nAlways open the sources before you trust an answer.\n\nFree 2-min stack audit: link in bio.\n\n#founder #startup #aitools #solofounder"
+ },
+ "x_post": "Competitor research in an hour:\n\n1. Ask Perplexity for the top 5 competitors\n2. Ask for their pricing pages\n3. Open every source, check it\n4. Have Claude turn it into a 1-page positioning doc",
+ "date": "2026-12-04"
+}

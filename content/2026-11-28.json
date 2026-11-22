@@ -1,0 +1,101 @@
+{
+ "format": "Founder mistake",
+ "video": {
+  "scenes": [
+   {
+    "type": "hook",
+    "lines": [
+     "The most",
+     "expensive",
+     "founder"
+    ],
+    "sel": "mistake.",
+    "dur": 3.4
+   },
+   {
+    "type": "card",
+    "tag": "MISTAKE",
+    "tone": "red",
+    "title": "Paying before revenue",
+    "body": "CRM, analytics, helpdesk, automations…<br><b>for a company with no customers yet.</b>",
+    "dur": 6.5
+   },
+   {
+    "type": "card",
+    "tag": "FIX",
+    "tone": "green",
+    "title": "Free plans first",
+    "body": "Upgrade only when a limit blocks revenue<br><b>or a missing feature costs you an hour a week.</b>",
+    "dur": 7
+   },
+   {
+    "type": "cta",
+    "lines": [
+     "What are you",
+     "overpaying"
+    ],
+    "sel": "for?",
+    "button": "Free 2-min stack audit",
+    "follow": "Follow for one tool to add & one to cut, every week.",
+    "dur": 6
+   }
+  ]
+ },
+ "carousel": {
+  "slides": [
+   {
+    "type": "cover",
+    "lines": [
+     "The most expensive",
+     "founder"
+    ],
+    "sel": "mistake.",
+    "sub": "And the rule that fixes it."
+   },
+   {
+    "type": "text",
+    "eyebrow": "the mistake",
+    "tone": "red",
+    "lines": [
+     "Paying for tools",
+     "before revenue"
+    ],
+    "bullets": [
+     "A CRM with no leads",
+     "An analytics suite with no traffic",
+     "Automations for work you do once a month"
+    ],
+    "strike": true
+   },
+   {
+    "type": "text",
+    "eyebrow": "the rule",
+    "tone": "green",
+    "lines": [
+     "Upgrade only",
+     "when…"
+    ],
+    "bullets": [
+     "A limit blocks revenue",
+     "A missing feature costs you 1h+ a week",
+     "A customer needs the paid feature"
+    ]
+   },
+   {
+    "type": "cta",
+    "lines": [
+     "What are you",
+     "overpaying"
+    ],
+    "sel": "for?",
+    "sub": "Our free 2-min audit names your gaps."
+   }
+  ]
+ },
+ "captions": {
+  "tiktok": "Paying for tools before you have revenue. Here's the rule for when to upgrade. Free stack audit in bio. #founder #startup #aitools #solofounder",
+  "instagram": "The most expensive founder mistake: paying for tools before revenue.\n\nUpgrade only when a limit blocks revenue, a missing feature costs you an hour a week, or a customer needs it.\n\nFree 2-min stack audit: link in bio.\n\n#founder #startup #aitools #solofounder"
+ },
+ "x_post": "Every subscription before revenue is a bet on a company that doesn't exist yet.\n\nUpgrade when:\n- a limit blocks revenue\n- a missing feature costs you 1h+ a week\n- a customer needs it\n\nOtherwise, free plan.",
+ "date": "2026-11-28"
+}

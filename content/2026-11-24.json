@@ -1,0 +1,105 @@
+{
+ "format": "Add / Cut",
+ "video": {
+  "scenes": [
+   {
+    "type": "hook",
+    "lines": [
+     "Stop",
+     "paying for"
+    ],
+    "sel": "this.",
+    "sub": "if you're a founder ↓",
+    "dur": 3.2
+   },
+   {
+    "type": "card",
+    "tag": "CUT",
+    "tone": "red",
+    "strike": true,
+    "title": "Premium analytics plan",
+    "body": "At a few hundred visitors a month,<br><b>a free plan tells you the same thing.</b>",
+    "chips": [
+     "PostHog · free tier",
+     "Google Analytics · free"
+    ],
+    "dur": 6.5
+   },
+   {
+    "type": "card",
+    "tag": "ADD",
+    "tone": "blue",
+    "title": "Tally",
+    "body": "Waitlists, surveys, onboarding forms.<br><b>Type a question, hit enter, done.</b>",
+    "dur": 6.5
+   },
+   {
+    "type": "cta",
+    "lines": [
+     "What else",
+     "should you"
+    ],
+    "sel": "cut?",
+    "button": "Free 2-min stack audit",
+    "follow": "Follow for one tool to add & one to cut, every week.",
+    "dur": 6
+   }
+  ]
+ },
+ "carousel": {
+  "slides": [
+   {
+    "type": "cover",
+    "lines": [
+     "One tool to cut.",
+     "One to"
+    ],
+    "sel": "add.",
+    "sub": "This week's Stack Sheet, in 4 slides."
+   },
+   {
+    "type": "text",
+    "eyebrow": "cut",
+    "tone": "red",
+    "lines": [
+     "The paid analytics plan",
+     "you don't have traffic for"
+    ],
+    "bullets": [
+     "A few hundred visitors a month",
+     "One number matters: visitors → signups",
+     "Free tiers of PostHog or Google Analytics cover it"
+    ]
+   },
+   {
+    "type": "text",
+    "eyebrow": "add",
+    "tone": "blue",
+    "lines": [
+     "Tally, for every form",
+     "you'll need this year"
+    ],
+    "bullets": [
+     "Waitlists, surveys, client briefs",
+     "Builds like a doc: type, enter, done",
+     "Put 3 questions behind every 'contact us'"
+    ]
+   },
+   {
+    "type": "cta",
+    "lines": [
+     "What else",
+     "should you"
+    ],
+    "sel": "cut?",
+    "sub": "Our free 2-min audit names your gaps."
+   }
+  ]
+ },
+ "captions": {
+  "tiktok": "Stop paying for analytics you don't have traffic for. Add Tally instead. Free stack audit in bio. #founder #startup #aitools #solofounder",
+  "instagram": "CUT: the premium analytics plan at a few hundred visitors a month.\nADD: Tally for every waitlist, survey and onboarding form.\n\nSave this. Free 2-min stack audit: link in bio.\n\n#founder #startup #aitools #solofounder"
+ },
+ "x_post": "Cut: the premium analytics plan you don't have traffic for. A free tier tells you the same thing at a few hundred visitors a month.\n\nAdd: Tally. Every waitlist, survey and onboarding form, built like a doc.",
+ "date": "2026-11-24"
+}

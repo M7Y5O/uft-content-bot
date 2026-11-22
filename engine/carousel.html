@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;width:1080px;height:1350px;overflow:hidden;background:#fff}
+.s{width:1080px;height:1350px;background:#FFFFFF;font-family:Inter,"Inter Display",sans-serif;color:#121212;position:relative;display:flex;flex-direction:column;justify-content:center;padding:120px 96px;-webkit-font-smoothing:antialiased}
+.hd{position:absolute;top:56px;left:96px;right:96px;display:flex;justify-content:space-between;font-size:26px;font-weight:600;letter-spacing:-.01em}
+.hd span,.mono{font-family:"DejaVu Sans Mono",monospace;font-weight:400}
+.hd span{color:#6B6B6B}
+.ft{position:absolute;bottom:56px;left:96px;right:96px;display:flex;justify-content:space-between;font-family:"DejaVu Sans Mono",monospace;font-size:24px;color:#2563EB}
+h2{margin:0;font-weight:600;letter-spacing:-.035em;line-height:1.06}
+.sel{position:relative;display:inline-block;color:#2563EB;background:#EEF3FE;border:4px solid #2563EB;padding:0 14px 6px;line-height:1.05}
+.sel i{position:absolute;width:22px;height:22px;background:#fff;border:4px solid #2563EB}
+.sel i:nth-child(1){left:-13px;top:-13px}.sel i:nth-child(2){right:-13px;top:-13px}.sel i:nth-child(3){left:-13px;bottom:-13px}.sel i:nth-child(4){right:-13px;bottom:-13px}
+.p{font-size:38px;line-height:1.4;color:#555;margin:0;letter-spacing:-.01em}
+.pill{display:inline-block;font-family:"DejaVu Sans Mono",monospace;font-size:24px;padding:6px 18px;border-radius:999px;align-self:flex-start}
+.t-blue{background:#EEF3FE;color:#2563EB}.t-red{background:#FDEEEE;color:#C93B40}.t-green{background:#E9F6F0;color:#1B7F55}.t-amber{background:#FDF4E6;color:#A86F12}.t-solid{background:#2563EB;color:#fff}
+.card{background:#fff;border:2px solid #ECECEF;border-radius:24px;padding:24px 30px;box-shadow:0 2px 4px rgba(18,18,18,.04),0 16px 40px rgba(18,18,18,.07)}
+.ai{background:#F4F7FE;border-color:#BFD3FB}
+.soft{background:#F6F6F8;border-radius:24px;padding:28px 30px}
+.btn{display:inline-flex;align-items:center;gap:14px;background:#2563EB;color:#fff;font-weight:600;font-size:38px;padding:24px 24px 24px 40px;border-radius:999px;align-self:flex-start}
+.k{display:inline-block;background:rgba(255,255,255,.22);border-radius:999px;padding:2px 16px;font-size:26px}
+.num{font-family:"DejaVu Sans Mono",monospace;font-size:24px;color:#2563EB;background:#EEF3FE;border-radius:999px;padding:6px 16px;flex:none}
+.prompt{font-family:"DejaVu Sans Mono",monospace;font-size:26px;line-height:1.55;background:#F6F6F8;border-left:5px solid #2563EB;border-radius:18px;padding:26px 30px;white-space:pre-wrap;color:#2A2A2A}
+ul.b{margin:0;padding-left:34px;font-size:34px;line-height:1.5;color:#444}
+</style></head>
+<body><div id="root"></div>
+<script>
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const SEL=w=>`<span class="sel"><i></i><i></i><i></i><i></i>${esc(w)}</span>`;
+const TONE={red:"t-red",blue:"t-blue",green:"t-green",amber:"t-amber",solid:"t-solid"};
+const EB=s=>s.eyebrow?`<span class="pill ${TONE[s.tone]||"t-blue"}">${esc(s.eyebrow)}</span>`:"";
+const TITLE=(s,size)=>`<h2 style="font-size:${s.size||size}px;${s.eyebrow?"margin-top:28px":""}">${(s.lines||[s.title]).map(esc).join("<br>")}${s.sel?" "+SEL(s.sel):""}</h2>`;
+function body(s){
+  switch(s.type){
+  case "cover": return TITLE(s,112)+(s.sub?`<p class="p" style="margin-top:56px;max-width:840px">${esc(s.sub)}</p>`:"");
+  case "text": return EB(s)+TITLE(s,90)+(s.bullets?`<div class="soft" style="margin-top:50px"><ul class="b" style="${s.strike?"text-decoration:line-through;color:#9A9A9A":""}">${s.bullets.map(b=>`<li>${esc(b)}</li>`).join("")}</ul></div>`:"")+(s.body?`<p class="p" style="margin-top:44px">${esc(s.body)}</p>`:"");
+  case "steps": return EB(s)+TITLE(s,80)+`<div style="margin-top:50px;display:flex;flex-direction:column;gap:18px">${s.steps.map((t,i)=>`<div class="card ${s.ai?"ai":""}" style="display:flex;gap:24px;align-items:center"><span class="num">${String(i+1).padStart(2,"0")}</span><span style="font-size:32px;font-weight:600;letter-spacing:-.015em;line-height:1.3">${esc(t)}</span></div>`).join("")}</div>`+(s.body?`<p class="p" style="margin-top:40px">${esc(s.body)}</p>`:"");
+  case "list": return EB(s)+TITLE(s,80)+`<div style="margin-top:50px;display:flex;flex-direction:column;gap:16px">${s.items.map(it=>`<div class="card" style="display:flex;justify-content:space-between;align-items:center;gap:18px"><div><div style="font-size:36px;font-weight:600;letter-spacing:-.015em">${esc(it.name)}</div>${it.meta?`<div style="font-size:26px;color:#6B6B6B">${esc(it.meta)}</div>`:""}</div>${it.badge?`<span class="pill ${TONE[it.tone]||"t-blue"}" style="align-self:center">${esc(it.badge)}</span>`:""}</div>`).join("")}</div>`;
+  case "versus": return EB(s)+TITLE(s,80)+`<div style="margin-top:50px;display:grid;grid-template-columns:1fr 1fr;gap:18px">${[s.left,s.right].map(x=>`<div class="card"><div style="font-size:40px;font-weight:600;letter-spacing:-.02em;margin-bottom:10px">${esc(x.name)}</div><ul class="b" style="font-size:28px">${x.points.map(p=>`<li>${esc(p)}</li>`).join("")}</ul></div>`).join("")}</div>`+(s.body?`<p class="p" style="margin-top:40px">${esc(s.body)}</p>`:"");
+  case "prompt": return EB(s)+TITLE(s,72)+`<div class="prompt" style="margin-top:44px">${esc(s.text)}</div>`+(s.body?`<p class="p" style="margin-top:36px;font-size:32px">${esc(s.body)}</p>`:"");
+  case "cta": return TITLE(s,100)+(s.sub?`<p class="p" style="margin-top:44px">${esc(s.sub)}</p>`:"")+`<div class="btn" style="margin-top:56px">${esc(s.button||"Free stack audit")} <span class="k">↵</span></div><p class="p" style="margin-top:56px;font-size:34px">${esc(s.follow||"Link in bio. Follow for one tool to add & one to cut, every week.")}</p>`;
+  }
+  return "";
+}
+function show(slides,i){
+  const s=slides[i],n=slides.length,last=i===n-1;
+  document.getElementById("root").innerHTML=`<div class="s"><div class="hd">useful founder tools<span>${String(i+1).padStart(2,"0")} / ${String(n).padStart(2,"0")}</span></div>${body(s)}<div class="ft"><span>@usefulfoundertools</span><span>${last?"save this ↓":"swipe →"}</span></div></div>`;
+}
+window.show=show;
+</script></body></html>

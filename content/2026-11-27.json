@@ -1,0 +1,105 @@
+{
+ "format": "Tool in 30 seconds",
+ "video": {
+  "scenes": [
+   {
+    "type": "hook",
+    "lines": [
+     "Decks in",
+     "minutes,",
+     "not"
+    ],
+    "sel": "hours.",
+    "dur": 3.4
+   },
+   {
+    "type": "card",
+    "tag": "✦ AI TOOL",
+    "tone": "solid",
+    "title": "Gamma",
+    "body": "Turns a prompt or your notes into<br><b>a deck, a doc or a one-page site.</b>",
+    "dur": 6
+   },
+   {
+    "type": "steps",
+    "tag": "HOW TO START",
+    "tone": "blue",
+    "title": "Your first deck",
+    "steps": [
+     "Paste your notes or outline",
+     "Pick a theme close to your brand",
+     "Edit the 2–3 slides that matter",
+     "Export or share the link"
+    ],
+    "dur": 8
+   },
+   {
+    "type": "cta",
+    "lines": [
+     "Which AI tools",
+     "fit your"
+    ],
+    "sel": "stack?",
+    "button": "Free 2-min stack audit",
+    "follow": "Follow for one AI tool every week.",
+    "dur": 6
+   }
+  ]
+ },
+ "carousel": {
+  "slides": [
+   {
+    "type": "cover",
+    "lines": [
+     "Pitch decks in minutes,",
+     "not"
+    ],
+    "sel": "hours.",
+    "sub": "Gamma, in 30 seconds."
+   },
+   {
+    "type": "text",
+    "eyebrow": "✦ ai tool",
+    "tone": "solid",
+    "lines": [
+     "What Gamma",
+     "does"
+    ],
+    "bullets": [
+     "Turns a prompt or notes into slides",
+     "Also makes docs and one-page sites",
+     "Good for proposals, pitch decks, recaps"
+    ]
+   },
+   {
+    "type": "steps",
+    "eyebrow": "how to start",
+    "lines": [
+     "Your first",
+     "deck"
+    ],
+    "steps": [
+     "Paste your notes or outline",
+     "Pick a theme close to your brand",
+     "Edit the 2–3 slides that matter",
+     "Export or share the link"
+    ]
+   },
+   {
+    "type": "cta",
+    "lines": [
+     "Which AI tools",
+     "fit your"
+    ],
+    "sel": "stack?",
+    "sub": "Our free 2-min audit names your gaps."
+   }
+  ]
+ },
+ "captions": {
+  "tiktok": "Gamma turns your notes into a deck in minutes. Here's how to start. Free stack audit in bio. #founder #startup #aitools #solofounder",
+  "instagram": "Gamma in 30 seconds ✦\n\nPaste notes → pick a theme → edit what matters → share.\n\nSave this for your next pitch. Free 2-min stack audit: link in bio.\n\n#founder #startup #aitools #solofounder"
+ },
+ "x_post": "Stop building decks slide by slide.\n\nPaste your notes into Gamma, pick a theme, then spend your time on the 2-3 slides that actually matter.",
+ "date": "2026-11-27"
+}

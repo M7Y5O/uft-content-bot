@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>
+:root{--ink:#121212;--muted:#7E7E7E;--line:#ECECEF;--soft:#F6F6F8;--blue:#2563EB;--bsoft:#EEF3FE;--red:#E5484D;--rsoft:#FDEEEE;--green:#1B7F55;--gsoft:#E9F6F0;--amber:#A86F12;--asoft:#FDF4E6}
+*{box-sizing:border-box}
+html,body{margin:0;width:1080px;height:1920px;overflow:hidden;background:#fff;font-family:Inter,"Inter Display",sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+.mono{font-family:"DejaVu Sans Mono",monospace}
+.scene{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 90px;opacity:0}
+.top{position:absolute;top:150px;left:0;right:0;text-align:center;font-weight:600;font-size:34px;letter-spacing:-.01em}
+h1{margin:0;font-weight:600;letter-spacing:-.035em;line-height:1.08;text-align:center}
+.sel{position:relative;display:inline-block;color:var(--blue);background:var(--bsoft);border:5px solid var(--blue);padding:0 18px 8px;line-height:1.05}
+.sel i{position:absolute;width:26px;height:26px;background:#fff;border:5px solid var(--blue)}
+.sel i:nth-child(1){left:-15px;top:-15px}.sel i:nth-child(2){right:-15px;top:-15px}.sel i:nth-child(3){left:-15px;bottom:-15px}.sel i:nth-child(4){right:-15px;bottom:-15px}
+.cap{font-size:48px;line-height:1.32;color:#2A2A2A;text-align:center;font-weight:500;letter-spacing:-.015em;max-width:900px}
+.cap b{color:var(--ink);font-weight:700}
+.tag{display:inline-block;font-family:"DejaVu Sans Mono",monospace;font-size:38px;padding:10px 30px;border-radius:999px;font-weight:500}
+.t-blue{background:var(--bsoft);color:var(--blue)}.t-red{background:var(--rsoft);color:var(--red)}.t-green{background:var(--gsoft);color:var(--green)}.t-amber{background:var(--asoft);color:var(--amber)}.t-solid{background:var(--blue);color:#fff}
+.card{background:#fff;border:2px solid var(--line);border-radius:26px;padding:28px 32px;box-shadow:0 2px 4px rgba(18,18,18,.04),0 18px 44px rgba(18,18,18,.07)}
+.ai{background:#F4F7FE;border-color:#BFD3FB}
+.num{font-family:"DejaVu Sans Mono",monospace;font-size:30px;color:var(--blue);background:var(--bsoft);border-radius:999px;padding:6px 18px;flex:none}
+.btn{display:inline-flex;align-items:center;gap:18px;background:var(--blue);color:#fff;font-weight:600;font-size:44px;padding:28px 28px 28px 46px;border-radius:999px}
+.btn .k{display:inline-grid;place-items:center;width:62px;height:46px;border-radius:999px;background:rgba(255,255,255,.22);font-size:28px}
+.prompt{font-family:"DejaVu Sans Mono",monospace;font-size:30px;line-height:1.55;background:var(--soft);border-left:6px solid var(--blue);border-radius:20px;padding:30px 34px;width:900px;white-space:pre-wrap;color:#2A2A2A}
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:22px;width:900px}
+.vs .card h3{margin:0 0 14px;font-size:46px;letter-spacing:-.02em}
+.vs ul{margin:0;padding-left:30px;font-size:32px;line-height:1.45;color:#444}
+.strike{text-decoration:line-through;color:#A3A3A3}
+</style></head>
+<body>
+<div id="root"></div>
+<script>
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const SEL=w=>`<span class="sel in"><i></i><i></i><i></i><i></i>${esc(w)}</span>`;
+const TOP=`<div class="top">useful founder tools</div>`;
+const TONE={red:"t-red",blue:"t-blue",green:"t-green",amber:"t-amber",solid:"t-solid"};
+function sceneHTML(s){
+  switch(s.type){
+  case "hook": return `<h1 class="in" style="font-size:${s.size||124}px">${(s.lines||[]).map(esc).join("<br>")}${s.sel?"<br>"+SEL(s.sel):""}</h1>${s.sub?`<div class="cap in" style="margin-top:80px">${esc(s.sub)}</div>`:""}`;
+  case "card": return TOP+`${s.tag?`<span class="tag ${TONE[s.tone]||"t-blue"} in">${esc(s.tag)}</span>`:""}
+     <h1 class="in" style="font-size:${s.size||96}px;margin-top:36px">${s.strike?`<span class="strike">${esc(s.title)}</span>`:esc(s.title)}</h1>
+     ${s.body?`<div class="cap in" style="margin-top:56px">${s.body}</div>`:""}
+     ${s.chips?`<div class="in" style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:50px">${s.chips.map(c=>`<span class="tag t-blue" style="font-size:30px">${esc(c)}</span>`).join("")}</div>`:""}`;
+  case "steps": return TOP+`${s.tag?`<span class="tag ${TONE[s.tone]||"t-solid"} in">${esc(s.tag)}</span>`:""}
+     <h1 class="in" style="font-size:${s.size||84}px;margin:34px 0 56px">${esc(s.title)}</h1>
+     <div style="display:flex;flex-direction:column;gap:22px;width:900px">${(s.steps||[]).map((t,i)=>`<div class="card in ${s.ai?"ai":""}" style="display:flex;gap:26px;align-items:center"><span class="num">${String(i+1).padStart(2,"0")}</span><span style="font-size:38px;font-weight:600;letter-spacing:-.015em;line-height:1.3">${esc(t)}</span></div>`).join("")}</div>`;
+  case "list": return TOP+`${s.tag?`<span class="tag ${TONE[s.tone]||"t-blue"} in">${esc(s.tag)}</span>`:""}
+     <h1 class="in" style="font-size:${s.size||84}px;margin:34px 0 56px">${esc(s.title)}</h1>
+     <div style="display:flex;flex-direction:column;gap:18px;width:900px">${(s.items||[]).map(it=>`<div class="card in" style="display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 30px"><div><div style="font-size:38px;font-weight:600;letter-spacing:-.015em">${esc(it.name)}</div>${it.meta?`<div style="font-size:28px;color:var(--muted)">${esc(it.meta)}</div>`:""}</div>${it.badge?`<span class="tag ${TONE[it.tone]||"t-blue"}" style="font-size:26px;padding:6px 18px">${esc(it.badge)}</span>`:""}</div>`).join("")}</div>`;
+  case "versus": return TOP+`<h1 class="in" style="font-size:${s.size||90}px;margin-bottom:56px">${esc(s.title)}</h1>
+     <div class="vs">${[s.left,s.right].map(x=>`<div class="card in"><h3>${esc(x.name)}</h3><ul>${(x.points||[]).map(p=>`<li>${esc(p)}</li>`).join("")}</ul></div>`).join("")}</div>
+     ${s.verdict?`<div class="cap in" style="margin-top:56px">${s.verdict}</div>`:""}`;
+  case "prompt": return TOP+`${s.tag?`<span class="tag t-solid in">${esc(s.tag)}</span>`:""}
+     <h1 class="in" style="font-size:${s.size||72}px;margin:34px 0 46px">${esc(s.title)}</h1>
+     <div class="prompt in">${esc(s.text)}</div>`;
+  case "cta": return TOP+`<h1 class="in" style="font-size:${s.size||112}px">${(s.lines||[]).map(esc).join("<br>")}${s.sel?" "+SEL(s.sel):""}</h1>
+     <div class="in" style="margin-top:80px"><span class="btn">${esc(s.button||"Free 2-min stack audit")} <span class="k">↵</span></span></div>
+     <div class="mono in" style="margin-top:46px;font-size:34px;color:var(--blue)">${esc(s.sub||"link in bio ↑")}</div>
+     ${s.follow?`<div class="cap in" style="margin-top:80px;font-size:40px;color:var(--muted)">${esc(s.follow)}</div>`:""}`;
+  }
+  return "";
+}
+let TL=[];
+function build(content){
+  const root=document.getElementById("root");root.innerHTML="";TL=[];let t=0;
+  content.scenes.forEach((s,i)=>{
+    const el=document.createElement("div");el.className="scene";el.innerHTML=sceneHTML(s);root.appendChild(el);
+    const d=s.dur||5;TL.push({el,a:t,b:t+d,last:i===content.scenes.length-1});t+=d;
+  });
+  return TL.map(x=>[x.a,x.b]);
+}
+const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
+const ease=x=>{x=clamp(x);return 1-Math.pow(1-x,3)};
+const FADE=0.35;
+function render(t){
+  TL.forEach((s,idx)=>{
+    let o=0;
+    if(idx===0) o=t<s.b?Math.min(1,clamp((s.b-t)/FADE)):0;
+    else if(t>=s.a-FADE&&t<s.b) o=Math.min(clamp((t-s.a+FADE)/FADE), s.last?1:clamp((s.b-t)/FADE));
+    s.el.style.opacity=o;
+    const ins=[...s.el.querySelectorAll(".in")];
+    const gap=Math.min(0.55,(s.b-s.a-1.2)/Math.max(1,ins.length));
+    ins.forEach((e,k)=>{
+      const st=s.a+0.1+k*gap;const p=ease((t-st)/0.5);
+      if(e.classList.contains("sel")){e.style.opacity=p;e.style.transform=`scale(${0.8+0.2*p})`;}
+      else{e.style.opacity=p;e.style.transform=`translateY(${(1-p)*40}px)`;}
+    });
+  });
+}
+window.build=build;window.render=render;
+</script>
+</body></html>

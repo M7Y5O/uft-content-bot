@@ -1,0 +1,142 @@
+{
+ "format": "Stack for a niche",
+ "video": {
+  "scenes": [
+   {
+    "type": "hook",
+    "lines": [
+     "The e-commerce",
+     "brand"
+    ],
+    "sel": "stack.",
+    "sub": "6 tools, one job each ↓",
+    "dur": 3.4
+   },
+   {
+    "type": "list",
+    "tag": "E-COMMERCE",
+    "title": "Everything you need",
+    "items": [
+     {
+      "name": "Shopify",
+      "meta": "store + checkout"
+     },
+     {
+      "name": "Klaviyo",
+      "meta": "email and SMS flows"
+     },
+     {
+      "name": "Gorgias",
+      "meta": "support with order data"
+     },
+     {
+      "name": "Canva",
+      "meta": "ads and product visuals"
+     },
+     {
+      "name": "Google Analytics",
+      "meta": "traffic and ads"
+     },
+     {
+      "name": "Claude",
+      "meta": "product pages, ad angles",
+      "badge": "✦ AI"
+     }
+    ],
+    "dur": 9
+   },
+   {
+    "type": "card",
+    "tag": "FIRST FLOW",
+    "tone": "green",
+    "title": "Abandoned cart email",
+    "body": "Set it up before anything else.<br><b>It's the email that pays for the rest.</b>",
+    "dur": 5.5
+   },
+   {
+    "type": "cta",
+    "lines": [
+     "What's missing",
+     "from your"
+    ],
+    "sel": "stack?",
+    "button": "Free 2-min stack audit",
+    "follow": "Follow for one tool to add & one to cut, every week.",
+    "dur": 6
+   }
+  ]
+ },
+ "carousel": {
+  "slides": [
+   {
+    "type": "cover",
+    "lines": [
+     "The e-commerce",
+     "brand"
+    ],
+    "sel": "stack.",
+    "sub": "Six tools, one job each. Save it."
+   },
+   {
+    "type": "list",
+    "eyebrow": "the stack",
+    "lines": [
+     "Everything you",
+     "need"
+    ],
+    "items": [
+     {
+      "name": "Shopify",
+      "meta": "store, checkout, payments"
+     },
+     {
+      "name": "Klaviyo",
+      "meta": "email and SMS flows"
+     },
+     {
+      "name": "Gorgias",
+      "meta": "support with order data"
+     },
+     {
+      "name": "Canva",
+      "meta": "ads and product visuals"
+     },
+     {
+      "name": "Claude",
+      "meta": "product pages, ad angles",
+      "badge": "✦ AI"
+     }
+    ]
+   },
+   {
+    "type": "text",
+    "eyebrow": "first flow",
+    "tone": "green",
+    "lines": [
+     "Set this up",
+     "first"
+    ],
+    "bullets": [
+     "Abandoned cart email",
+     "Welcome series for new subscribers",
+     "Post-purchase thank you + review ask"
+    ]
+   },
+   {
+    "type": "cta",
+    "lines": [
+     "What's missing",
+     "from your"
+    ],
+    "sel": "stack?",
+    "sub": "Our free 2-min audit names your gaps."
+   }
+  ]
+ },
+ "captions": {
+  "tiktok": "The e-commerce brand stack, and the first email flow to set up. Free stack audit in bio. #founder #startup #aitools #solofounder #ecommerce #shopify",
+  "instagram": "The e-commerce stack ✦\n\nShopify · Klaviyo · Gorgias · Canva · Google Analytics · Claude\n\nFirst flow to build: abandoned cart.\n\nSave this. Free 2-min stack audit: link in bio.\n\n#founder #startup #aitools #solofounder"
+ },
+ "x_post": "The e-commerce brand stack:\n\nShopify (store)\nKlaviyo (email/SMS)\nGorgias (support)\nCanva (visuals)\nGoogle Analytics (traffic)\nClaude (product pages, ad angles)\n\nFirst flow: abandoned cart.",
+ "date": "2026-12-03"
+}

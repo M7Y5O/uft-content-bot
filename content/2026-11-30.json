@@ -1,0 +1,109 @@
+{
+ "format": "AI workflow",
+ "video": {
+  "scenes": [
+   {
+    "type": "hook",
+    "lines": [
+     "Stop rewriting",
+     "the same"
+    ],
+    "sel": "emails.",
+    "sub": "a 20-minute AI setup ↓",
+    "dur": 3.4
+   },
+   {
+    "type": "steps",
+    "tag": "✦ AI WORKFLOW",
+    "title": "Answer templates",
+    "ai": true,
+    "steps": [
+     "List your 10 most common questions",
+     "Copy 2 emails that sound like you",
+     "Ask Claude for replies in your voice",
+     "Save them in Notion, reuse daily"
+    ],
+    "dur": 8.5
+   },
+   {
+    "type": "prompt",
+    "tag": "THE PROMPT",
+    "title": "Copy this",
+    "text": "Here are 10 questions my customers ask and 2 emails I wrote. For each question, write a reply in my voice, under 120 words, with [brackets] for details.",
+    "dur": 7
+   },
+   {
+    "type": "cta",
+    "lines": [
+     "Which AI workflows",
+     "fit your"
+    ],
+    "sel": "stack?",
+    "button": "Free 2-min stack audit",
+    "follow": "Follow for one AI workflow every week.",
+    "dur": 6
+   }
+  ]
+ },
+ "carousel": {
+  "slides": [
+   {
+    "type": "cover",
+    "lines": [
+     "Stop rewriting",
+     "the same"
+    ],
+    "sel": "emails.",
+    "sub": "A 20-minute AI workflow."
+   },
+   {
+    "type": "steps",
+    "eyebrow": "✦ ai workflow",
+    "tone": "solid",
+    "lines": [
+     "Answer templates",
+     "in your voice"
+    ],
+    "ai": true,
+    "steps": [
+     "List your 10 most common questions",
+     "Copy 2 emails that sound like you",
+     "Ask Claude for replies in your voice",
+     "Save them in Notion, reuse daily"
+    ]
+   },
+   {
+    "type": "prompt",
+    "eyebrow": "the prompt",
+    "lines": [
+     "Copy",
+     "this"
+    ],
+    "text": "Here are 10 questions my customers often ask, and two emails I wrote so you can learn my tone.\n\nFor each question, write a reply in my voice: under 120 words, friendly and direct, with [brackets] where I add details.\n\nQUESTIONS: [paste]\nMY EMAILS: [paste]"
+   },
+   {
+    "type": "cta",
+    "lines": [
+     "Which AI workflows",
+     "fit your"
+    ],
+    "sel": "stack?",
+    "sub": "Our free 2-min audit names your gaps."
+   }
+  ]
+ },
+ "captions": {
+  "tiktok": "Write your most common email replies once, in your own voice, with this prompt. Free stack audit in bio. #founder #startup #aitools #solofounder #productivity",
+  "instagram": "Answer templates in your voice ✦\n\n1. List your 10 most common questions\n2. Copy 2 emails that sound like you\n3. Paste both into Claude with the prompt (slide 3)\n4. Save in Notion, reuse daily\n\nSave this. Free 2-min stack audit: link in bio.\n\n#founder #startup #aitools #solofounder"
+ },
+ "x_post": "You answer the same 10 emails every week.\n\nGive Claude those 10 questions + 2 emails you wrote. Ask for replies in your voice, under 120 words, with [brackets] for details.\n\nSave them. Copy, fill, send.",
+ "x_thread": [
+  "You answer the same 10 emails every week. Here's the 20-minute fix:",
+  "1. Search your sent mail. List the 10 questions you answer most.",
+  "2. Copy two emails you wrote that sound like you.",
+  "3. Paste both into Claude: \"For each question, write a reply in my voice, under 120 words, with [brackets] for details.\"",
+  "4. Save the replies in a Notion page. Next time: copy, fill the brackets, send.",
+  "Want 2 more workflows matched to your stack? Free 2-min audit, link in bio."
+ ],
+ "date": "2026-11-30"
+}

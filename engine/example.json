@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-23",
+  "format": "AI workflow",
+  "video": {
+    "scenes": [
+      {"type": "hook", "lines": ["Stop taking notes", "on your"], "sel": "calls.", "sub": "a 10-minute AI setup ↓", "dur": 3.4},
+      {"type": "steps", "tag": "✦ AI WORKFLOW", "title": "Calls that write their own notes", "ai": true, "size": 76,
+       "steps": ["Connect an AI notetaker like Fathom", "Take the call. Don't write anything.", "Get a summary + action items after", "Paste decisions into the client's Notion page"], "dur": 9},
+      {"type": "card", "tag": "WHY IT WORKS", "tone": "green", "title": "Listen, don't type.", "body": "You stay in the conversation.<br><b>The notes still get written.</b>", "dur": 5.5},
+      {"type": "cta", "lines": ["Which AI workflows", "fit your"], "sel": "stack?", "button": "Free 2-min stack audit", "follow": "Follow for one AI workflow every week.", "dur": 6}
+    ]
+  },
+  "carousel": {
+    "slides": [
+      {"type": "cover", "lines": ["Stop taking notes", "on your"], "sel": "calls.", "sub": "A 10-minute AI workflow for sales and client calls."},
+      {"type": "steps", "eyebrow": "✦ ai workflow", "tone": "solid", "lines": ["Calls that write", "their own notes"], "ai": true,
+       "steps": ["Connect an AI notetaker like Fathom to your calendar", "Take the call. Don't write anything.", "Get a summary and action items after", "Paste decisions into the client's Notion page"]},
+      {"type": "text", "eyebrow": "why it works", "tone": "green", "lines": ["Listen,", "don't type."], "bullets": ["You stay focused on the person", "Nothing you agreed on gets lost", "Your follow-up email takes 2 minutes"]},
+      {"type": "cta", "lines": ["Which AI workflows", "fit your"], "sel": "stack?", "sub": "Our free audit picks 3 for you."}
+    ]
+  },
+  "captions": {
+    "tiktok": "Stop taking notes on your calls. Let an AI notetaker write the summary and action items, then paste the decisions into Notion. Free stack audit in bio. #founder #aitools #productivity #startup #notion",
+    "instagram": "Calls that write their own notes ✦\n\n1. Connect an AI notetaker (we use Fathom)\n2. Take the call, don't type\n3. Get the summary + action items\n4. Paste decisions into the client's Notion page\n\nSave this for your next sales call. Free 2-min stack audit: link in bio.\n\n#founder #aitools #productivity #startup #solofounder"
+  },
+  "x_post": "Stop taking notes on calls.\n\nAI notetaker records → summary + action items land after → paste the decisions into the client's Notion page.\n\nYou listen. The notes still get written.",
+  "x_thread": [
+    "Stop taking notes on your sales and client calls. Here's the 10-minute AI setup:",
+    "1. Connect an AI notetaker like Fathom to your calendar.",
+    "2. Take the call. Don't type anything. Just listen.",
+    "3. After the call you get a summary and action items.",
+    "4. Paste the decisions into the client's Notion page. Follow-up email takes 2 minutes.",
+    "Want 2 more workflows matched to your stack? Free 2-min audit, link in bio."
+  ]
+}

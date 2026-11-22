@@ -1,0 +1,144 @@
+{
+ "format": "Stack audit promo",
+ "video": {
+  "scenes": [
+   {
+    "type": "hook",
+    "lines": [
+     "Freelancer?",
+     "Here's your"
+    ],
+    "sel": "stack.",
+    "sub": "from our free audit ↓",
+    "dur": 3.4
+   },
+   {
+    "type": "list",
+    "tag": "EXAMPLE RESULT · FREELANCE",
+    "title": "Your gaps, ranked",
+    "items": [
+     {
+      "name": "Webflow",
+      "meta": "portfolio site",
+      "badge": "now",
+      "tone": "red"
+     },
+     {
+      "name": "Cal.com",
+      "meta": "booking link",
+      "badge": "now",
+      "tone": "red"
+     },
+     {
+      "name": "Attio",
+      "meta": "client pipeline",
+      "badge": "next",
+      "tone": "amber"
+     },
+     {
+      "name": "Fathom + Notion",
+      "meta": "call notes workflow",
+      "badge": "✦ AI",
+      "tone": "solid"
+     }
+    ],
+    "dur": 9
+   },
+   {
+    "type": "card",
+    "tag": "HOW",
+    "tone": "blue",
+    "title": "8 questions, 2 minutes",
+    "body": "Your business, stage, budget and AI use.<br><b>Picks tuned to you.</b>",
+    "dur": 5.5
+   },
+   {
+    "type": "cta",
+    "lines": [
+     "Run yours.",
+     "It's"
+    ],
+    "sel": "free.",
+    "button": "Free 2-min stack audit",
+    "follow": "Follow for one tool to add & one to cut, every week.",
+    "dur": 6
+   }
+  ]
+ },
+ "carousel": {
+  "slides": [
+   {
+    "type": "cover",
+    "lines": [
+     "Freelancer?",
+     "Here's your"
+    ],
+    "sel": "stack.",
+    "sub": "An example result from our free audit."
+   },
+   {
+    "type": "list",
+    "eyebrow": "example result",
+    "lines": [
+     "Your gaps,",
+     "ranked"
+    ],
+    "items": [
+     {
+      "name": "Webflow",
+      "meta": "portfolio site",
+      "badge": "now",
+      "tone": "red"
+     },
+     {
+      "name": "Cal.com",
+      "meta": "booking link",
+      "badge": "now",
+      "tone": "red"
+     },
+     {
+      "name": "Attio",
+      "meta": "client pipeline",
+      "badge": "next",
+      "tone": "amber"
+     },
+     {
+      "name": "Fathom + Notion",
+      "meta": "call notes workflow",
+      "badge": "✦ AI",
+      "tone": "solid"
+     }
+    ]
+   },
+   {
+    "type": "steps",
+    "eyebrow": "how it works",
+    "lines": [
+     "8 questions,",
+     "2 minutes"
+    ],
+    "steps": [
+     "What you build and your stage",
+     "Region, budget, biggest pain",
+     "How much you use AI",
+     "What you already have"
+    ]
+   },
+   {
+    "type": "cta",
+    "lines": [
+     "Run yours.",
+     "It's"
+    ],
+    "sel": "free.",
+    "sub": "Link in bio."
+   }
+  ]
+ },
+ "captions": {
+  "tiktok": "Example freelance result from our free stack audit. Run yours in 2 minutes, link in bio. #founder #startup #aitools #solofounder #freelance",
+  "instagram": "Freelancer? Example result from our free stack audit:\n\nNOW: portfolio site + booking link\nNEXT: client pipeline\n✦ AI: call notes workflow\n\nRun yours in 2 minutes: link in bio.\n\n#founder #startup #aitools #solofounder"
+ },
+ "x_post": "Example result from our free stack audit (freelancer, making revenue, wants more clients):\n\nNow: portfolio site, booking link\nNext: client pipeline\nAI workflow: call notes → tasks\n\n8 questions, 2 minutes.",
+ "date": "2026-12-06"
+}

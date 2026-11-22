@@ -1,0 +1,131 @@
+{
+ "format": "Tool vs tool",
+ "video": {
+  "scenes": [
+   {
+    "type": "hook",
+    "lines": [
+     "Zapier, Make",
+     "or n8n?"
+    ],
+    "sel": "pick one.",
+    "dur": 3.4
+   },
+   {
+    "type": "list",
+    "tag": "AUTOMATION",
+    "title": "One job, three tools",
+    "items": [
+     {
+      "name": "Zapier",
+      "meta": "widest app coverage, easiest"
+     },
+     {
+      "name": "Make",
+      "meta": "visual, multi-step, cheaper per run"
+     },
+     {
+      "name": "n8n",
+      "meta": "open source, self-host, AI agents",
+      "badge": "✦ AI",
+      "tone": "solid"
+     }
+    ],
+    "dur": 8
+   },
+   {
+    "type": "card",
+    "tag": "PICK",
+    "tone": "green",
+    "title": "Not technical? Zapier.",
+    "body": "Complex flows on a budget: Make.<br><b>Technical and want control: n8n.</b>",
+    "dur": 6.5
+   },
+   {
+    "type": "cta",
+    "lines": [
+     "Which tools",
+     "fit your"
+    ],
+    "sel": "stack?",
+    "button": "Free 2-min stack audit",
+    "follow": "Follow for one tool to add & one to cut, every week.",
+    "dur": 6
+   }
+  ]
+ },
+ "carousel": {
+  "slides": [
+   {
+    "type": "cover",
+    "lines": [
+     "Zapier, Make",
+     "or n8n?"
+    ],
+    "sel": "Pick one.",
+    "sub": "One job, three tools, how to choose."
+   },
+   {
+    "type": "list",
+    "eyebrow": "the options",
+    "lines": [
+     "Three ways to",
+     "automate"
+    ],
+    "items": [
+     {
+      "name": "Zapier",
+      "meta": "widest app coverage, easiest to start"
+     },
+     {
+      "name": "Make",
+      "meta": "visual builder, complex flows"
+     },
+     {
+      "name": "n8n",
+      "meta": "open source, self-hostable, AI agent nodes",
+      "badge": "✦ AI",
+      "tone": "solid"
+     }
+    ]
+   },
+   {
+    "type": "text",
+    "eyebrow": "how to pick",
+    "tone": "green",
+    "lines": [
+     "Pick by who",
+     "you are"
+    ],
+    "bullets": [
+     "Not technical, want it working today → Zapier",
+     "Multi-step flows, watching costs → Make",
+     "Technical, want full control → n8n"
+    ]
+   },
+   {
+    "type": "cta",
+    "lines": [
+     "Which tools",
+     "fit your"
+    ],
+    "sel": "stack?",
+    "sub": "Our free 2-min audit names your gaps."
+   }
+  ]
+ },
+ "captions": {
+  "tiktok": "Zapier vs Make vs n8n: pick by who you are, not by features. Free stack audit in bio. #founder #startup #aitools #solofounder #automation #nocode",
+  "instagram": "Zapier, Make or n8n?\n\nNot technical → Zapier\nComplex flows on a budget → Make\nTechnical, want control → n8n\n\nSave this. Free 2-min stack audit: link in bio.\n\n#founder #startup #aitools #solofounder"
+ },
+ "x_post": "Zapier vs Make vs n8n, the short version:\n\nNot technical, want it working today → Zapier\nMulti-step flows, watching costs → Make\nTechnical, want control and self-hosting → n8n",
+ "x_thread": [
+  "Zapier, Make or n8n? Pick by who you are, not by feature lists:",
+  "Zapier: the widest app coverage and the easiest start. Best if you're not technical.",
+  "Make: a visual builder for multi-step flows. Good when flows get complex and you watch costs.",
+  "n8n: open source, self-hostable, with AI agent nodes. Best if you're technical and want control.",
+  "Start with one workflow that saves you an hour a week. Then decide.",
+  "Free 2-min stack audit tells you which one fits. Link in bio."
+ ],
+ "date": "2026-12-02"
+}

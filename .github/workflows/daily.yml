@@ -1,0 +1,50 @@
+name: UFT daily content
+
+on:
+  schedule:
+    - cron: "40 5 * * *"   # 05:40 UTC = 06:40 Paris in winter (07:40 in summer). GitHub can start runs late.
+  workflow_dispatch:
+    inputs:
+      command:
+        description: "What to run"
+        type: choice
+        default: daily
+        options: [daily, test, chats, bank]
+      day:
+        description: "Date to send (YYYY-MM-DD), empty = today"
+        required: false
+
+concurrency:
+  group: uft-content-bot
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Restore browser cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: uft-playwright-1.49
+
+      - name: Install render tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-inter fonts-dejavu-core > /dev/null
+          python3 -m pip install --quiet playwright==1.49.1
+          python3 -m playwright install --with-deps chromium > /dev/null
+
+      - name: Run
+        run: python3 bot.py ${{ inputs.command || 'daily' }} ${{ inputs.day }}
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHANNEL: ${{ vars.TELEGRAM_CHANNEL }}
+          DRY_RUN: ${{ vars.DRY_RUN || 'true' }}
