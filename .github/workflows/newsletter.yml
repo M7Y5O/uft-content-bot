@@ -10,7 +10,7 @@ on:
       command:
         description: "What to run"
         type: choice
-        options: [list, test, send]
+        options: [list, test, send, setup]
         default: list
       issue:
         description: "Issue number for test (empty = next Ready issue)"
@@ -32,8 +32,8 @@ jobs:
         run: python3 newsletter.py ${{ inputs.command || 'send' }} ${{ inputs.issue }}
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
-          NOTION_SUBSCRIBERS_DB: 4201628220ab81a49d62e2a4336dbb93
-          NOTION_ISSUES_DB: 4201628220ab810e9288e1677d79ba79
+          NOTION_SUBSCRIBERS_DB: ${{ vars.NOTION_SUBSCRIBERS_DB }}
+          NOTION_ISSUES_DB: ${{ vars.NOTION_ISSUES_DB }}
           SMTP_HOST: ${{ vars.SMTP_HOST || 'smtp.gmail.com' }}
           SMTP_PORT: ${{ vars.SMTP_PORT || '465' }}
           SMTP_USER: ${{ secrets.SMTP_USER }}
