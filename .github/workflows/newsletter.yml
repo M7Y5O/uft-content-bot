@@ -5,15 +5,17 @@ on:
     # Every day 07:47 UTC (08:47 Paris). Sends only when an issue in Notion is Ready and due,
     # and finishes any leftover recipients from the day before.
     - cron: "47 7 * * *"
+    # Every hour at :17: welcome email to anyone who subscribed since the last run.
+    - cron: "17 * * * *"
   workflow_dispatch:
     inputs:
       command:
         description: "What to run"
         type: choice
-        options: [list, test, send, setup]
+        options: [list, test, welcome, send, setup]
         default: list
       issue:
-        description: "Issue number for test (empty = next Ready issue)"
+        description: "For test: issue number, or welcome (empty = next Ready issue)"
         required: false
         default: ""
 
@@ -29,7 +31,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Run
-        run: python3 newsletter.py ${{ inputs.command || 'send' }} ${{ inputs.issue }}
+        run: python3 newsletter.py ${{ inputs.command || (github.event.schedule == '17 * * * *' && 'welcome' || 'send') }} ${{ inputs.issue }}
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN || secrets.UFT_SENDER }}
           NOTION_SUBSCRIBERS_DB: ${{ vars.NOTION_SUBSCRIBERS_DB }}

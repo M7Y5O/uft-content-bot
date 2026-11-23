@@ -3,7 +3,8 @@
 
 Commands:
   send          send every issue marked Ready whose Send date is today or earlier
-  test [N]      send issue N (or the next Ready one) to TEST_TO only
+  welcome       send newsletter/welcome.html to every subscriber who hasn't had it yet
+  test [N]      send issue N (or the next Ready one, or `welcome`) to TEST_TO only
   list          print subscriber counts, send nothing
   setup         create the two databases inside the shared Notion page and print their ids
 
@@ -31,6 +32,9 @@ TODAY = datetime.now(ZoneInfo("Europe/Paris")).date().isoformat()
 UNSUB_FORM = "https://tally.so/r/2jKL4M"
 E = os.environ.get
 DRY = E("DRY_RUN", "true").lower() != "false"
+WELCOME_SUBJECT = E("WELCOME_SUBJECT") or "You're in: welcome to The Stack Sheet"
+WELCOME_PREVIEW = "What lands every Tuesday, and one thing to do in the next two minutes."
+WELCOME_COL = "Welcome sent"
 
 
 def notion(method, path, body=None):
@@ -97,12 +101,14 @@ def subscribers():
         status = text(pr.get("Status")) or "Subscribed"
         prev = people.get(email, {})
         people[email] = {"email": email, "status": status, "page": p,
+                         "welcomed": bool(text(pr.get(WELCOME_COL))) or prev.get("welcomed", False),
                          "last_sent": str(text(pr.get("Last sent")) or prev.get("last_sent", ""))[:10]}
     return people
 
 
 def render(issue_no, email):
-    html = (ROOT / "newsletter" / f"issue-{issue_no:03d}.html").read_text()
+    name = "welcome" if issue_no == "welcome" else f"issue-{int(issue_no):03d}"
+    html = (ROOT / "newsletter" / f"{name}.html").read_text()
     unsub = UNSUB_FORM + "?" + urllib.parse.urlencode({"email": email, "status": "Unsubscribed"})
     return html.replace("{{unsubscribe_url}}", unsub), unsub
 
@@ -205,9 +211,38 @@ def cmd_send():
         mailer.close()
 
 
+def cmd_welcome():
+    """Welcome every Subscribed email that has never had the welcome email (any of its rows)."""
+    db = E("NOTION_SUBSCRIBERS_DB")
+    if WELCOME_COL not in notion("GET", f"databases/{db}")["properties"]:
+        notion("PATCH", f"databases/{db}", {"properties": {WELCOME_COL: {"date": {}}}})
+        print(f"Added the '{WELCOME_COL}' column to Subscribers.")
+    todo = [p for p in subscribers().values() if p["status"] == "Subscribed" and not p["welcomed"]]
+    if not todo:
+        print("No new subscribers to welcome."); return
+    cap, mailer, sent = int(E("MAX_PER_RUN", "400")), Mailer(), 0
+    try:
+        for p in todo[:cap]:
+            html, unsub = render("welcome", p["email"])
+            try:
+                mailer.send(p["email"], WELCOME_SUBJECT, WELCOME_PREVIEW, html, unsub)
+            except smtplib.SMTPRecipientsRefused:
+                if not DRY: setv(p["page"], "Status", "Bounced")
+                continue
+            if not DRY: setv(p["page"], WELCOME_COL, TODAY)
+            sent += 1
+            time.sleep(1.2)
+    finally:
+        mailer.close()
+    msg = f"👋 Welcome email sent to {sent} new subscriber" + ("s" if sent != 1 else "") + ": " + ", ".join(p["email"] for p in todo[:sent][:10])
+    print(msg); telegram(msg)
+
+
 def cmd_test(no=None):
     to = E("TEST_TO") or sys.exit("Set TEST_TO first.")
-    if no is None:
+    if str(no).lower() == "welcome":
+        iss = {"no": "welcome", "subject": WELCOME_SUBJECT, "preview": WELCOME_PREVIEW}
+    elif no is None:
         issues = ready_issues() or sys.exit("No Ready issue; pass an issue number: test 1")
         iss = issues[0]
     else:
@@ -287,5 +322,5 @@ if __name__ == "__main__":
         print("Newsletter not configured yet: add the NOTION_TOKEN secret."); sys.exit(0)
     if a[0] != "setup" and not (E("NOTION_SUBSCRIBERS_DB") and E("NOTION_ISSUES_DB")):
         print("Run the workflow with command 'setup' first, then add NOTION_SUBSCRIBERS_DB and NOTION_ISSUES_DB variables."); sys.exit(0)
-    {"send": cmd_send, "test": lambda: cmd_test(a[1] if len(a) > 1 and a[1] else None),
+    {"send": cmd_send, "welcome": cmd_welcome, "test": lambda: cmd_test(a[1] if len(a) > 1 and a[1] else None),
      "list": cmd_list, "setup": cmd_setup}.get(a[0], lambda: sys.exit(f"unknown command {a[0]}"))()
