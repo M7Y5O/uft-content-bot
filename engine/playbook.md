@@ -58,3 +58,11 @@ Text budget: hook ≤ 6 words + 1 selected word; card titles ≤ 6 words; steps 
 Render frames first (`python3 render.py content.json out frames`) and look at each one:
 no text clipped or overflowing, nothing under y=1600 in the video (TikTok UI), selection box on one word only.
 Fix the JSON, then the full render (`python3 render.py content.json out`).
+
+## Voiceover (every video scene)
+
+Every scene in `video.scenes` gets a `"say"`: the line the AI voice reads over it.
+- Spoken English, short sentences, says what the screen shows but doesn't read it word for word.
+- Hook: under 10 words. Card: 15–25 words. Steps/list: 25–35 words. CTA ends with "link in bio".
+- Write things the way they're said: "Cal dot com", "n eight n", "sass" for SaaS, numbers in words.
+- No need to fix `dur`: the bot stretches each scene to fit its voice line.
