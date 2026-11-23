@@ -10,7 +10,8 @@
     ],
     "sel": "emails.",
     "sub": "a 20-minute AI setup ↓",
-    "dur": 3.4
+    "dur": 3.4,
+    "say": "Stop rewriting the same emails. This takes twenty minutes."
    },
    {
     "type": "steps",
@@ -23,14 +24,16 @@
      "Ask Claude for replies in your voice",
      "Save them in Notion, reuse daily"
     ],
-    "dur": 8.5
+    "dur": 8.5,
+    "say": "List your ten most common questions. Copy two emails that sound like you. Ask Claude for replies in your voice. Save them in Notion, and reuse them every day."
    },
    {
     "type": "prompt",
     "tag": "THE PROMPT",
     "title": "Copy this",
     "text": "Here are 10 questions my customers ask and 2 emails I wrote. For each question, write a reply in my voice, under 120 words, with [brackets] for details.",
-    "dur": 7
+    "dur": 7,
+    "say": "Here's the prompt. Ask for a reply in your voice to each question, under a hundred and twenty words, with brackets for the details."
    },
    {
     "type": "cta",
@@ -41,7 +44,8 @@
     "sel": "stack?",
     "button": "Free 2-min stack audit",
     "follow": "Follow for one AI workflow every week.",
-    "dur": 6
+    "dur": 6,
+    "say": "Which AI workflows fit your stack? Free audit, link in bio."
    }
   ]
  },

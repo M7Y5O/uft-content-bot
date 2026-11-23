@@ -11,7 +11,8 @@
     ],
     "sel": "calls.",
     "sub": "a 10-minute AI setup ↓",
-    "dur": 3.4
+    "dur": 3.4,
+    "say": "Stop taking notes on your calls. Here's a ten-minute AI setup."
    },
    {
     "type": "steps",
@@ -25,7 +26,8 @@
      "Get a summary + action items after",
      "Paste decisions into the client's Notion page"
     ],
-    "dur": 9
+    "dur": 9,
+    "say": "Connect an AI notetaker like Fathom. Take the call, and don't write anything. You get a summary and action items after. Paste the decisions into your client's Notion page."
    },
    {
     "type": "card",
@@ -33,7 +35,8 @@
     "tone": "green",
     "title": "Listen, don't type.",
     "body": "You stay in the conversation.<br><b>The notes still get written.</b>",
-    "dur": 5.5
+    "dur": 5.5,
+    "say": "Why it works: you listen instead of typing. You stay in the conversation, and the notes still get written."
    },
    {
     "type": "cta",
@@ -44,7 +47,8 @@
     "sel": "stack?",
     "button": "Free 2-min stack audit",
     "follow": "Follow for one AI workflow every week.",
-    "dur": 6
+    "dur": 6,
+    "say": "Which AI workflows fit your stack? Take the free two-minute stack audit. Link in bio."
    }
   ]
  },

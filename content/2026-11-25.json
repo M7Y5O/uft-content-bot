@@ -10,7 +10,8 @@
     ],
     "sel": "taxes.",
     "sub": "the answer is about ↑",
-    "dur": 3.4
+    "dur": 3.4,
+    "say": "Stripe or Paddle? The answer is about taxes."
    },
    {
     "type": "versus",
@@ -31,7 +32,8 @@
       "Higher fees, less work"
      ]
     },
-    "dur": 8
+    "dur": 8,
+    "say": "With Stripe, you're the seller, so you file sales tax and VAT yourself. Lower fees, full control. Paddle is the merchant of record: they collect and file the tax for you, for higher fees."
    },
    {
     "type": "card",
@@ -39,7 +41,8 @@
     "tone": "green",
     "title": "Selling software worldwide?",
     "body": "A merchant of record saves you the tax work.<br><b>One country or services? Stripe.</b>",
-    "dur": 6.5
+    "dur": 6.5,
+    "say": "Selling software worldwide? A merchant of record saves you the tax work. One country, or selling services? Stripe."
    },
    {
     "type": "cta",
@@ -50,7 +53,8 @@
     "sel": "stack?",
     "button": "Free 2-min stack audit",
     "follow": "Follow for one tool to add & one to cut, every week.",
-    "dur": 6
+    "dur": 6,
+    "say": "Which payment tool fits your stack? Free two-minute audit, link in bio."
    }
   ]
  },

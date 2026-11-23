@@ -9,7 +9,8 @@
      "in an"
     ],
     "sel": "hour.",
-    "dur": 3.2
+    "dur": 3.2,
+    "say": "Do your market research in one hour."
    },
    {
     "type": "card",
@@ -17,7 +18,8 @@
     "tone": "solid",
     "title": "Perplexity",
     "body": "An AI search engine that answers<br><b>with the sources it used.</b>",
-    "dur": 6
+    "dur": 6,
+    "say": "Perplexity is an AI search engine that answers with the sources it used."
    },
    {
     "type": "steps",
@@ -30,7 +32,8 @@
      "Open the sources, check them",
      "Have Claude write a 1-page summary"
     ],
-    "dur": 8
+    "dur": 8,
+    "say": "Ask who your top five competitors are. Ask for their pricing pages. Open the sources and check them. Then have Claude write a one-page summary."
    },
    {
     "type": "cta",
@@ -41,7 +44,8 @@
     "sel": "stack?",
     "button": "Free 2-min stack audit",
     "follow": "Follow for one AI tool every week.",
-    "dur": 6
+    "dur": 6,
+    "say": "Which AI tools fit your stack? Free audit, link in bio."
    }
   ]
  },

@@ -1,7 +1,8 @@
 """useful founder tools · daily content bot.
 
 Renders today's post (content/YYYY-MM-DD.json) and sends it to your Telegram channel:
-TikTok video + caption, Instagram carousel + caption, X post (+ thread). You post it yourself.
+Video with voiceover (TikTok + Instagram Reels) + caption, Instagram carousel + caption, X post (+ thread).
+You post it yourself. The voiceover script is sent too, in case you'd rather record your own voice.
 
 Commands:
   python3 bot.py daily [YYYY-MM-DD]   render and send (today, Europe/Paris, by default)
@@ -10,7 +11,8 @@ Commands:
   python3 bot.py chats                list chats the bot has seen (to find the channel id)
   python3 bot.py bank                 how many days of content are left
 Env: TELEGRAM_BOT_TOKEN, TELEGRAM_CHANNEL (e.g. -1001234567890), DRY_RUN=true|false
-Standard library only, plus engine/render.py (Playwright + ffmpeg) for rendering.
+Standard library only, plus engine/render.py (Playwright + ffmpeg) for rendering
+and engine/voice.py (edge-tts) for the voiceover. VOICE / VOICE_RATE pick the voice.
 """
 import datetime
 import html
@@ -77,9 +79,31 @@ def today_paris():
     return datetime.datetime.now(ZoneInfo("Europe/Paris")).date().isoformat()
 
 
+sys.path.insert(0, str(ROOT / "engine"))
+import voice  # noqa: E402
+
+
 def render(day, out):
-    src = ROOT / "content" / f"{day}.json"
-    subprocess.run([sys.executable, str(ROOT / "engine" / "render.py"), str(src), str(out)], check=True)
+    """Voice first (it sets each scene's length), then the video, then the voice goes under it.
+    Returns (content, error): error is None when the voiceover worked, else why the video is silent."""
+    c = json.loads((ROOT / "content" / f"{day}.json").read_text())
+    out.mkdir(parents=True, exist_ok=True)
+    clips, err = None, None
+    try:
+        clips = voice.prepare(c, out)
+    except Exception as e:
+        err = str(e)[:300]
+        print("Voiceover skipped:", err)
+    tmp = out / "_content.json"
+    tmp.write_text(json.dumps(c))
+    subprocess.run([sys.executable, str(ROOT / "engine" / "render.py"), str(tmp), str(out)], check=True)
+    if clips:
+        try:
+            voice.mux(c, out, clips)
+        except Exception as e:
+            err = "mixing the voice failed: " + str(e)[:250]
+            print(err)
+    return c, err
 
 
 def daily(day):
@@ -88,13 +112,12 @@ def daily(day):
         send_text(f"⚠️ <b>No content for {day}.</b>\nThe content bank is empty. Ask Claude to write the next 2 weeks "
                   f"and add the files to <code>content/</code>.")
         return
-    c = json.loads(src.read_text())
     out = ROOT / "out" / day
-    render(day, out)
+    c, vo_err = render(day, out)
     left = days_left(day)
 
     send_text(f"📅 <b>{day} · {html.escape(c.get('format', ''))}</b>\nToday's useful founder tools content. "
-              f"Post the video on TikTok, the carousel on Instagram, the text on X."
+              f"Post the video on TikTok and as an Instagram Reel, the carousel on Instagram, the text on X."
               + (f"\n\n⏳ {left} days of content left in the bank." if left <= 4 else ""))
 
     vcap = f"🎬 <b>TikTok</b> (also Reels / Shorts)\n\n{pre(c['captions']['tiktok'])}"
@@ -103,6 +126,13 @@ def daily(day):
     else:
         api("sendVideo", {"chat_id": CHAT, "caption": vcap[:1024], "parse_mode": "HTML", "supports_streaming": "true"},
             {"video": ("tiktok.mp4", (out / "tiktok.mp4").read_bytes(), "video/mp4")})
+
+    say = "\n\n".join(voice.lines(c))
+    if vo_err:
+        send_text(f"⚠️ <b>The voiceover didn't work today</b>, so the video is silent ({html.escape(vo_err[:200])}).\n"
+                  f"Record it yourself, or paste this script into TikTok's text-to-speech:\n\n{pre(say)}")
+    else:
+        send_text(f"🎙 <b>Voiceover script</b> (already in the video)\n\n{pre(say)}")
 
     slides = sorted(out.glob("carousel-*.png"))[:10]
     icap = f"🖼 <b>Instagram carousel</b>\n\n{pre(c['captions']['instagram'])}"
@@ -135,8 +165,8 @@ def main():
     if cmd == "daily":
         daily(day)
     elif cmd == "preview":
-        render(day, ROOT / "out" / day)
-        print("Rendered to", ROOT / "out" / day)
+        _, err = render(day, ROOT / "out" / day)
+        print("Rendered to", ROOT / "out" / day, "(silent: " + err + ")" if err else "with voiceover")
     elif cmd == "test":
         send_text("✅ useful founder tools bot is connected to this channel.")
     elif cmd == "chats":

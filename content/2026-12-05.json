@@ -10,7 +10,8 @@
      "a business"
     ],
     "sel": "account.",
-    "dur": 3.6
+    "dur": 3.6,
+    "say": "Your personal account is not a business account."
    },
    {
     "type": "card",
@@ -18,7 +19,8 @@
     "tone": "red",
     "title": "Mixing the money",
     "body": "Client payments and groceries in one account.<br><b>Your accountant will hate it.</b>",
-    "dur": 6
+    "dur": 6,
+    "say": "Mixing the money: client payments and groceries in one account. Your accountant will hate it."
    },
    {
     "type": "card",
@@ -26,7 +28,8 @@
     "tone": "green",
     "title": "Open a business account",
     "body": "Do it before your first invoice.<br><b>Qonto in the EU, Mercury in the US.</b>",
-    "dur": 6.5
+    "dur": 6.5,
+    "say": "Open a business account before your first invoice. Qonto in Europe, Mercury in the US."
    },
    {
     "type": "cta",
@@ -37,7 +40,8 @@
     "sel": "stack?",
     "button": "Free 2-min stack audit",
     "follow": "Follow for one tool to add & one to cut, every week.",
-    "dur": 6
+    "dur": 6,
+    "say": "What's missing from your stack? Free two-minute audit, link in bio."
    }
   ]
  },

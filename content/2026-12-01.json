@@ -10,7 +10,8 @@
     ],
     "sel": "ping-pong.",
     "sub": "one tool fixes it ↓",
-    "dur": 3.2
+    "dur": 3.2,
+    "say": "Stop the email ping-pong. One tool fixes it."
    },
    {
     "type": "card",
@@ -19,7 +20,8 @@
     "strike": true,
     "title": "\"When works for you?\"",
     "body": "Five emails to book one call.<br><b>Every single time.</b>",
-    "dur": 6
+    "dur": 6,
+    "say": "When works for you? Five emails to book one call. Every single time."
    },
    {
     "type": "card",
@@ -27,7 +29,8 @@
     "tone": "blue",
     "title": "Cal.com",
     "body": "One booking link with your real availability.<br><b>They pick a slot. Done.</b>",
-    "dur": 6.5
+    "dur": 6.5,
+    "say": "Add Cal dot com. One booking link with your real availability. They pick a slot. Done."
    },
    {
     "type": "cta",
@@ -38,7 +41,8 @@
     "sel": "cut?",
     "button": "Free 2-min stack audit",
     "follow": "Follow for one tool to add & one to cut, every week.",
-    "dur": 6
+    "dur": 6,
+    "say": "What else should you cut? Free two-minute stack audit, link in bio."
    }
   ]
  },

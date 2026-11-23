@@ -10,7 +10,8 @@
      "founder"
     ],
     "sel": "mistake.",
-    "dur": 3.4
+    "dur": 3.4,
+    "say": "This is the most expensive founder mistake."
    },
    {
     "type": "card",
@@ -18,7 +19,8 @@
     "tone": "red",
     "title": "Paying before revenue",
     "body": "CRM, analytics, helpdesk, automations…<br><b>for a company with no customers yet.</b>",
-    "dur": 6.5
+    "dur": 6.5,
+    "say": "Paying before revenue. A CRM, analytics, a helpdesk, automations, for a company with no customers yet."
    },
    {
     "type": "card",
@@ -26,7 +28,8 @@
     "tone": "green",
     "title": "Free plans first",
     "body": "Upgrade only when a limit blocks revenue<br><b>or a missing feature costs you an hour a week.</b>",
-    "dur": 7
+    "dur": 7,
+    "say": "The fix: free plans first. Upgrade only when a limit blocks revenue, or a missing feature costs you an hour a week."
    },
    {
     "type": "cta",
@@ -37,7 +40,8 @@
     "sel": "for?",
     "button": "Free 2-min stack audit",
     "follow": "Follow for one tool to add & one to cut, every week.",
-    "dur": 6
+    "dur": 6,
+    "say": "What are you overpaying for? Check your stack for free in two minutes. Link in bio."
    }
   ]
  },

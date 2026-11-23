@@ -10,7 +10,8 @@
     ],
     "sel": "stack?",
     "sub": "find out in 2 minutes ↓",
-    "dur": 3.4
+    "dur": 3.4,
+    "say": "What's missing from your stack? Find out in two minutes."
    },
    {
     "type": "steps",
@@ -23,7 +24,8 @@
      "How much you use AI today",
      "What you already have"
     ],
-    "dur": 7.5
+    "dur": 7.5,
+    "say": "Answer eight quick questions: what you build, your stage and team, your budget, your biggest pain, and how you use AI today."
    },
    {
     "type": "list",
@@ -49,7 +51,8 @@
       "tone": "solid"
      }
     ],
-    "dur": 7.5
+    "dur": 7.5,
+    "say": "You get your gaps, ranked. For this sass: PostHog for analytics now, Loops for email next, and an AI workflow with Cursor and Claude."
    },
    {
     "type": "cta",
@@ -60,7 +63,8 @@
     "sel": "free.",
     "button": "Free 2-min stack audit",
     "follow": "Follow for one tool to add & one to cut, every week.",
-    "dur": 6
+    "dur": 6,
+    "say": "Run yours. It's free. Link in bio."
    }
   ]
  },

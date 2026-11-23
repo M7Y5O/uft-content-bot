@@ -10,7 +10,8 @@
     ],
     "sel": "stack.",
     "sub": "6 tools, one job each ↓",
-    "dur": 3.2
+    "dur": 3.2,
+    "say": "The solo sass stack. Six tools, one job each."
    },
    {
     "type": "list",
@@ -43,7 +44,8 @@
       "badge": "✦ AI"
      }
     ],
-    "dur": 9
+    "dur": 9,
+    "say": "Framer for your site. Supabase for database and auth. Vercel to deploy. Stripe or Paddle for payments. Loops for product email. And Claude as your AI assistant."
    },
    {
     "type": "card",
@@ -51,7 +53,8 @@
     "tone": "amber",
     "title": "CRM, helpdesk, Slack",
     "body": "Add them when the volume shows up.<br><b>Not before.</b>",
-    "dur": 5.5
+    "dur": 5.5,
+    "say": "A CRM, a helpdesk, Slack? They can wait. Add them when the volume shows up. Not before."
    },
    {
     "type": "cta",
@@ -62,7 +65,8 @@
     "sel": "stack?",
     "button": "Free 2-min stack audit",
     "follow": "Follow for one tool to add & one to cut, every week.",
-    "dur": 6
+    "dur": 6,
+    "say": "What's missing from your stack? Find out in two minutes. Link in bio."
    }
   ]
  },

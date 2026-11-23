@@ -10,7 +10,8 @@
     ],
     "sel": "stack.",
     "sub": "from our free audit ↓",
-    "dur": 3.4
+    "dur": 3.4,
+    "say": "Freelancer? Here's your stack, from our free audit."
    },
    {
     "type": "list",
@@ -42,7 +43,8 @@
       "tone": "solid"
      }
     ],
-    "dur": 9
+    "dur": 9,
+    "say": "Fix these now: a Webflow portfolio, and a Cal dot com booking link. Next, Attio for your client pipeline. And an AI workflow: Fathom plus Notion for your call notes."
    },
    {
     "type": "card",
@@ -50,7 +52,8 @@
     "tone": "blue",
     "title": "8 questions, 2 minutes",
     "body": "Your business, stage, budget and AI use.<br><b>Picks tuned to you.</b>",
-    "dur": 5.5
+    "dur": 5.5,
+    "say": "Eight questions, two minutes. Your business, stage, budget and AI use, with picks tuned to you."
    },
    {
     "type": "cta",
@@ -61,7 +64,8 @@
     "sel": "free.",
     "button": "Free 2-min stack audit",
     "follow": "Follow for one tool to add & one to cut, every week.",
-    "dur": 6
+    "dur": 6,
+    "say": "Run yours. It's free. Link in bio."
    }
   ]
  },

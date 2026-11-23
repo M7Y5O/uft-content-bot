@@ -9,7 +9,8 @@
      "or n8n?"
     ],
     "sel": "pick one.",
-    "dur": 3.4
+    "dur": 3.4,
+    "say": "Zapier, Make, or n eight n? Pick one."
    },
    {
     "type": "list",
@@ -31,7 +32,8 @@
       "tone": "solid"
      }
     ],
-    "dur": 8
+    "dur": 8,
+    "say": "Zapier has the most apps, and it's the easiest. Make is visual, and cheaper per run. n eight n is open source, self-hosted, and great for AI agents."
    },
    {
     "type": "card",
@@ -39,7 +41,8 @@
     "tone": "green",
     "title": "Not technical? Zapier.",
     "body": "Complex flows on a budget: Make.<br><b>Technical and want control: n8n.</b>",
-    "dur": 6.5
+    "dur": 6.5,
+    "say": "Not technical? Zapier. Complex flows on a budget? Make. Technical, and you want control? n eight n."
    },
    {
     "type": "cta",
@@ -50,7 +53,8 @@
     "sel": "stack?",
     "button": "Free 2-min stack audit",
     "follow": "Follow for one tool to add & one to cut, every week.",
-    "dur": 6
+    "dur": 6,
+    "say": "Which tools fit your stack? Free audit, link in bio."
    }
   ]
  },

@@ -39,7 +39,7 @@ jobs:
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq ffmpeg fonts-inter fonts-dejavu-core > /dev/null
-          python3 -m pip install --quiet playwright==1.49.1
+          python3 -m pip install --quiet playwright==1.49.1 edge-tts
           python3 -m playwright install --with-deps chromium > /dev/null
 
       - name: Run
@@ -48,3 +48,5 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHANNEL: ${{ vars.TELEGRAM_CHANNEL }}
           DRY_RUN: ${{ vars.DRY_RUN || 'true' }}
+          VOICE: ${{ vars.VOICE }}
+          VOICE_RATE: ${{ vars.VOICE_RATE }}

@@ -10,7 +10,8 @@
      "not"
     ],
     "sel": "hours.",
-    "dur": 3.4
+    "dur": 3.4,
+    "say": "Make decks in minutes, not hours."
    },
    {
     "type": "card",
@@ -18,7 +19,8 @@
     "tone": "solid",
     "title": "Gamma",
     "body": "Turns a prompt or your notes into<br><b>a deck, a doc or a one-page site.</b>",
-    "dur": 6
+    "dur": 6,
+    "say": "Gamma is an AI tool that turns a prompt or your notes into a deck, a doc, or a one-page site."
    },
    {
     "type": "steps",
@@ -31,7 +33,8 @@
      "Edit the 2–3 slides that matter",
      "Export or share the link"
     ],
-    "dur": 8
+    "dur": 8,
+    "say": "Paste your notes. Pick a theme close to your brand. Edit the two or three slides that matter. Then export, or share the link."
    },
    {
     "type": "cta",
@@ -42,7 +45,8 @@
     "sel": "stack?",
     "button": "Free 2-min stack audit",
     "follow": "Follow for one AI tool every week.",
-    "dur": 6
+    "dur": 6,
+    "say": "Which AI tools fit your stack? Free two-minute audit, link in bio."
    }
   ]
  },

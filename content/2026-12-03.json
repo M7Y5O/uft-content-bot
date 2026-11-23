@@ -10,7 +10,8 @@
     ],
     "sel": "stack.",
     "sub": "6 tools, one job each ↓",
-    "dur": 3.4
+    "dur": 3.4,
+    "say": "The e-commerce brand stack. Six tools, one job each."
    },
    {
     "type": "list",
@@ -43,7 +44,8 @@
       "badge": "✦ AI"
      }
     ],
-    "dur": 9
+    "dur": 9,
+    "say": "Shopify for your store. Klaviyo for email and SMS. Gorgias for support. Canva for ads and visuals. Google Analytics for traffic. And Claude for product pages and ad angles."
    },
    {
     "type": "card",
@@ -51,7 +53,8 @@
     "tone": "green",
     "title": "Abandoned cart email",
     "body": "Set it up before anything else.<br><b>It's the email that pays for the rest.</b>",
-    "dur": 5.5
+    "dur": 5.5,
+    "say": "Your first flow: the abandoned cart email. Set it up before anything else. It's the email that pays for the rest."
    },
    {
     "type": "cta",
@@ -62,7 +65,8 @@
     "sel": "stack?",
     "button": "Free 2-min stack audit",
     "follow": "Follow for one tool to add & one to cut, every week.",
-    "dur": 6
+    "dur": 6,
+    "say": "What's missing from your stack? Find out free, in two minutes. Link in bio."
    }
   ]
  },
